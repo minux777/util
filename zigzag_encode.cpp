@@ -108,6 +108,13 @@ int main(int argc, char * argv[]){
     cout << endl;
   }
   */
+
+  cout << endl << "rectangle_quuery" << endl;
+  for(int i = 0; i < x2 - x1 + 1; i++){
+    for(int j = 0; j < y2 - y1 + 1; j++)
+      cout << ((matrix3[i][j] != matrix[i][j])?"x":"o" )<< " ";
+    cout << endl;
+  }
   return 0;
 }
 

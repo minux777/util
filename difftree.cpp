@@ -642,12 +642,42 @@ int** DiffTree::rectangle_query(uint x1, uint y1, uint x2, uint y2){
 
 
 /*************************************descomosition in quadboxes range query*********************************/
+/*int** DiffTree::rangeQuery(uint x1, uint y1, uint x2, uint y2){
+  int pos = EncodeMorton2(x1, y1) + 1;
+  DiffTreeIterator it = accessIt(pos);
+
+  int ** toret;
+  uint cols = y2 - y1 + 1;
+  uint rows = x2 - x1 + 1;
+  toret = (int**) malloc(sizeof(int*) * rows);
+
+  for(int i = 0 ; i < rows; i++)
+    toret[i] = (int*) malloc(sizeof(int) * cols);
+  
+  
+  
+
+  for(int i = 0; i <= EncodeMorton2(x2, y2) + 1 - pos; i++){
+    int x = DecodeMorton2X(pos - 1 + i), y = DecodeMorton2Y(pos - 1 + i);
+    if(x >= x1 && x <= x2 && y >= y1 && y <= y2)
+      toret[x - x1][y - y1] = it.getCurrentValue();
+    it.getSucc();
+  }
+  return toret;
+  }*/
+
+
+
 int** DiffTree::dqb_range_query(uint x1, uint y1, uint x2, uint y2){
-  int **matrix = (int**) malloc(sizeof(int *) * (y2 - y1 + 1));
-  for(int i = 0; i < (y2 - y1 + 1); i++){
-    matrix[i] = (int*) malloc(sizeof(int) * (x2 - x1 + 1));
+  int cols = y2 - y1 + 1;
+  int rows = x2 - x1 + 1;
+
+  int ** matrix = (int**)malloc(rows * sizeof(int *));
+  for(int i = 0; i < rows; i++){
+    matrix[i] = (int*)malloc(cols * sizeof(int)) ;
+
     if(matrix[i] == NULL)
-      cout << "malloc error" << endl;
+    cout << "malloc error" << endl;
   }
 
   vector<pair<pair<int,int>, int> >  querys;
