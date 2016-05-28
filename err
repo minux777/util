@@ -1,0 +1,172 @@
+rm: cannot remove ‘zigzag.x’: No such file or directory
+zigzag_encode.cpp: In function ‘int main(int, char**)’:
+zigzag_encode.cpp:51:9: warning: unused variable ‘matrix’ [-Wunused-variable]
+   int **matrix = df.dqb_range_query(x1,y1,x2,y2);
+         ^
+zigzag_encode.cpp:87:9: warning: unused variable ‘matrix2’ [-Wunused-variable]
+   int **matrix2 = df.rangeQuery(x1,y1,x2,y2);  
+         ^
+zigzag_encode.cpp:100:9: warning: unused variable ‘matrix3’ [-Wunused-variable]
+   int **matrix3 = df.rectangle_query(x1,y1,x2,y2);
+         ^
+morton.cpp: In function ‘std::vector<std::pair<std::pair<int, int>, int> > decomposeWindow(int, int, int, int)’:
+morton.cpp:169:7: warning: unused variable ‘k’ [-Wunused-variable]
+   int k = 1;
+       ^
+directcodes.cpp: In function ‘unsigned int mypow(unsigned int, unsigned int)’:
+directcodes.cpp:68:13: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (i=0;i<exponente;i++){
+             ^
+directcodes.cpp: In function ‘ushort* optimizationk(unsigned int*, int, unsigned int*)’:
+directcodes.cpp:109:13: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(i=1;i<=nBits;i++){
+             ^
+directcodes.cpp:118:10: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(i==nBits)
+          ^
+directcodes.cpp:148:29: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(j=0;j<tableNLevels[i]-1;j++){
+                             ^
+directcodes.cpp:163:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(j=0;j<tableNLevels[nBits];j++){
+                              ^
+directcodes.cpp:175:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if(j==tableNLevels[nBits])
+                            ^
+directcodes.cpp:198:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(j=0;j<tableNLevels[nBits];j++){
+                              ^
+directcodes.cpp: In function ‘FTRep* createFT(unsigned int*, unsigned int)’:
+directcodes.cpp:357:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(j=0;j<rep->tamtablebase;j++)
+                  ^
+directcodes.cpp:364:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  while((j<rep->tamtablebase)&&(levelSizeAux[j]!=0)){
+                ^
+directcodes.cpp: In function ‘unsigned int accessFT(FTRep*, unsigned int)’:
+directcodes.cpp:562:16: warning: unused variable ‘i’ [-Wunused-variable]
+  register uint i;
+                ^
+directcodes.cpp:564:9: warning: unused variable ‘rankLevel’ [-Wunused-variable]
+  uint * rankLevel = listRep->rankLevels;
+         ^
+directcodes.cpp:565:9: warning: unused variable ‘list’ [-Wunused-variable]
+  byte * list;
+         ^
+directcodes.cpp:566:7: warning: unused variable ‘n’ [-Wunused-variable]
+  uint n , partialSum=0, sumAux=0;
+       ^
+directcodes.cpp:566:25: warning: unused variable ‘sumAux’ [-Wunused-variable]
+  uint n , partialSum=0, sumAux=0;
+                         ^
+directcodes.cpp:568:18: warning: unused variable ‘bS’ [-Wunused-variable]
+  bitRankW32Int * bS = listRep->bS;
+                  ^
+directcodes.cpp:569:9: warning: unused variable ‘bsData’ [-Wunused-variable]
+  uint * bsData = listRep->bS->data;
+         ^
+directcodes.cpp:571:7: warning: unused variable ‘levelIndex’ [-Wunused-variable]
+  uint levelIndex;
+       ^
+directcodes.cpp: In function ‘unsigned int* decompressFT(FTRep*, unsigned int)’:
+directcodes.cpp:656:21: warning: unused variable ‘sumAux’ [-Wunused-variable]
+  uint partialSum=0, sumAux=0;
+                     ^
+directcodes.cpp:657:7: warning: unused variable ‘ini’ [-Wunused-variable]
+  uint ini = 0;
+       ^
+directcodes.cpp:658:18: warning: unused variable ‘bS’ [-Wunused-variable]
+  bitRankW32Int * bS = listRep->bS;
+                  ^
+directcodes.cpp:659:9: warning: unused variable ‘bsData’ [-Wunused-variable]
+  uint * bsData = listRep->bS->data;
+         ^
+directcodes.cpp:661:7: warning: unused variable ‘levelIndex’ [-Wunused-variable]
+  uint levelIndex;
+       ^
+directcodes.cpp: In function ‘void saveFT(FTRep*, FILE*)’:
+directcodes.cpp:763:6: warning: unused variable ‘i’ [-Wunused-variable]
+  int i;
+      ^
+directcodes.cpp: In function ‘FTRep* loadFT(FILE*)’:
+directcodes.cpp:810:6: warning: unused variable ‘i’ [-Wunused-variable]
+  int i;
+      ^
+directcodes.cpp:813:48: warning: ignoring return value of ‘size_t fread(void*, size_t, size_t, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+  fread(&(rep->listLength),sizeof(uint),1,flist);
+                                                ^
+directcodes.cpp:814:45: warning: ignoring return value of ‘size_t fread(void*, size_t, size_t, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+  fread(&(rep->nLevels),sizeof(byte),1,flist);
+                                             ^
+directcodes.cpp:815:45: warning: ignoring return value of ‘size_t fread(void*, size_t, size_t, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+  fread(&(rep->tamCode),sizeof(uint),1,flist);
+                                             ^
+directcodes.cpp:817:50: warning: ignoring return value of ‘size_t fread(void*, size_t, size_t, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+  fread(&(rep->tamtablebase),sizeof(uint),1,flist);
+                                                  ^
+directcodes.cpp:819:60: warning: ignoring return value of ‘size_t fread(void*, size_t, size_t, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+  fread(rep->tablebase,sizeof(uint),rep->tamtablebase,flist); 
+                                                            ^
+directcodes.cpp:822:57: warning: ignoring return value of ‘size_t fread(void*, size_t, size_t, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+  fread(rep->base_bits,sizeof(ushort),rep->nLevels,flist);
+                                                         ^
+directcodes.cpp:828:50: warning: ignoring return value of ‘size_t fread(void*, size_t, size_t, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+  fread(rep->base,sizeof(uint),rep->nLevels,flist);
+                                                  ^
+directcodes.cpp:833:59: warning: ignoring return value of ‘size_t fread(void*, size_t, size_t, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+  fread(rep->levelsIndex,sizeof(uint),rep->nLevels+1,flist);
+                                                           ^
+directcodes.cpp:836:54: warning: ignoring return value of ‘size_t fread(void*, size_t, size_t, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+  fread(rep->iniLevel,sizeof(uint),rep->nLevels,flist);
+                                                      ^
+directcodes.cpp:839:56: warning: ignoring return value of ‘size_t fread(void*, size_t, size_t, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+  fread(rep->rankLevels,sizeof(uint),rep->nLevels,flist);
+                                                        ^
+directcodes.cpp:843:58: warning: ignoring return value of ‘size_t fread(void*, size_t, size_t, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+  fread(rep->levels,sizeof(uint),(rep->tamCode/W+1),flist);
+                                                          ^
+difftree.cpp: In member function ‘size_t DiffTree::searchTrace(int)’:
+difftree.cpp:313:63: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while(traceStackPos > 1 && key > traceValues[traceStackPos-1]) {
+                                                               ^
+difftree.cpp: In member function ‘DiffTreeIterator DiffTree::accessIt(int)’:
+difftree.cpp:492:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while(part != pos) {
+                 ^
+difftree.cpp:494:14: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if(pos < part) {
+              ^
+difftree.cpp: In member function ‘int** DiffTree::rangeQuery(unsigned int, unsigned int, unsigned int, unsigned int)’:
+difftree.cpp:566:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i = 0 ; i < rows; i++)
+                       ^
+difftree.cpp:572:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i = 0; i <= EncodeMorton2(x2, y2) + 1 - pos; i++){
+                                                   ^
+difftree.cpp:574:13: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if(x >= x1 && x <= x2 && y >= y1 && y <= y2)
+             ^
+difftree.cpp:574:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if(x >= x1 && x <= x2 && y >= y1 && y <= y2)
+                        ^
+difftree.cpp:574:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if(x >= x1 && x <= x2 && y >= y1 && y <= y2)
+                                   ^
+difftree.cpp:574:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if(x >= x1 && x <= x2 && y >= y1 && y <= y2)
+                                              ^
+difftree.cpp: In member function ‘int DiffTree::points_in_rectangle(std::pair<unsigned int, unsigned int>, int**, unsigned int, unsigned int, unsigned int, unsigned int)’:
+difftree.cpp:593:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+difftree.cpp: In member function ‘int DiffTree::some_points_in_rectangle(std::pair<unsigned int, unsigned int>, int**, unsigned int, unsigned int, unsigned int)’:
+difftree.cpp:606:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while(curr <= end){
+                 ^
+difftree.cpp:625:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+difftree.cpp: In member function ‘int** DiffTree::dqb_range_query(unsigned int, unsigned int, unsigned int, unsigned int)’:
+difftree.cpp:647:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int i = 0; i < (y2 - y1 + 1); i++){
+                                  ^

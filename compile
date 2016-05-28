@@ -1,0 +1,4 @@
+#g++ -std=c++11 -Wall -Wextra  -DNDEBUG  -O3 -ffast-math -funroll-loops -DHAVE_CXA_DEMANGLE -I/home/alejandro/include -L/home/alejandro/lib  -o parentheses.x parentheses.cpp -lsdsl -ldivsufsort -ldivsufsort64 
+#g++ -std=c++11 -DNDEBUG  -O3 -ffast-math -funroll-loops -DHAVE_CXA_DEMANGLE -I/home/alejandro/include -L/home/alejandro/lib  -o rle.x rle.cpp morton.cpp bitrankw32intkTree.cpp directcodes.cpp basickTree.cpp difftree.cpp -lsdsl -ldivsufsort -ldivsufsort64 
+rm zigzag.x
+g++ -std=c++11 -Wall -Wextra -DNDEBUG  -O3 -ffast-math -funroll-loops -DHAVE_CXA_DEMANGLE -I/home/ale/include -L/home/ale/lib  -o zigzag.x zigzag_encode.cpp morton.cpp bitrankw32intkTree.cpp directcodes.cpp basickTree.cpp difftree.cpp -lsdsl -ldivsufsort -ldivsufsort64 
