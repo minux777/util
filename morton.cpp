@@ -94,7 +94,7 @@ int zdivide(unsigned int start, unsigned int end, unsigned int *litmax, unsigned
   return false;//linea para warning
 }
 
-
+/*
 std::vector<int> read_morton_mdt(const char  name[], int flag = 1){
   FILE *file;
   std::vector<int> to_ret;
@@ -161,8 +161,9 @@ std::vector<int> read_morton_mdt(const char  name[], int flag = 1){
   printf("%s %d\n", "min: ", _min);
   printf("%s %d\n", "max: ", _max);
   printf("%s %d\n", "new no data: ", (_max - _min) + 1);
+  
   return to_ret;
-}
+  }*/
 
 
 std::vector<std::pair< std::pair<int,int>, int> > decomposeWindow(int x, int y, int n1, int n2){

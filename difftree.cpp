@@ -547,7 +547,9 @@ uint DiffTree::access(int pos) {
   //return 0;
   return accessIt(pos).getCurrentValue();
 }
-
+uint DiffTree::access(int x, int y){
+  return access(EncodeMorton2(x,y) + 1);
+}
 
 /*
 * x entre 0 y filas - 1
@@ -642,31 +644,6 @@ int** DiffTree::rectangle_query(uint x1, uint y1, uint x2, uint y2){
 
 
 /*************************************descomosition in quadboxes range query*********************************/
-/*int** DiffTree::rangeQuery(uint x1, uint y1, uint x2, uint y2){
-  int pos = EncodeMorton2(x1, y1) + 1;
-  DiffTreeIterator it = accessIt(pos);
-
-  int ** toret;
-  uint cols = y2 - y1 + 1;
-  uint rows = x2 - x1 + 1;
-  toret = (int**) malloc(sizeof(int*) * rows);
-
-  for(int i = 0 ; i < rows; i++)
-    toret[i] = (int*) malloc(sizeof(int) * cols);
-  
-  
-  
-
-  for(int i = 0; i <= EncodeMorton2(x2, y2) + 1 - pos; i++){
-    int x = DecodeMorton2X(pos - 1 + i), y = DecodeMorton2Y(pos - 1 + i);
-    if(x >= x1 && x <= x2 && y >= y1 && y <= y2)
-      toret[x - x1][y - y1] = it.getCurrentValue();
-    it.getSucc();
-  }
-  return toret;
-  }*/
-
-
 
 int** DiffTree::dqb_range_query(uint x1, uint y1, uint x2, uint y2){
   int cols = y2 - y1 + 1;
@@ -681,23 +658,22 @@ int** DiffTree::dqb_range_query(uint x1, uint y1, uint x2, uint y2){
   }
 
   vector<pair<pair<int,int>, int> >  querys;
-  querys = decomposeWindow(x1, y1, (x2 - x1 + 1), (y2 - y1 + 1));
+  querys = decomposeWindow(x1, y1, cols, rows);//x1, y1, cols, rows
 
   for(unsigned int i = 0; i < querys.size(); i++){
-    int ** temp;
-    temp = rangeQuery(querys[i].first.first, 
-			 querys[i].first.second,
-			 querys[i].first.first + querys[i].second - 1,
-			 querys[i].first.second + querys[i].second - 1);
-
+    uint pos = EncodeMorton2(querys[i].first.first, querys[i].first.second) + 1;
+    DiffTreeIterator it = accessIt(pos);
+    
     for(int j = 0; j < querys[i].second; j++){
       for(int k = 0; k < querys[i].second; k++){
-	matrix[querys[i].first.first + j - x1][querys[i].first.second + k - y1] =  temp[j][k];
+	int x = DecodeMorton2X(pos - 1), y = DecodeMorton2Y(pos - 1);
+	matrix[x - x1][y - y1] =  it.getCurrentValue();
+	++pos;
+	it.getSucc();
       }
     }
   }
   return matrix;
-
 }
 
 

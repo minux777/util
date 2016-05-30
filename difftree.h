@@ -62,6 +62,7 @@ class DiffTree {
   
   /** Returns the value at position pos of the original list of elements. */
   uint access(int pos);
+  uint access(int x, int y);
   DiffTreeIterator accessIt(int pos);
   /** Returns the range between p1 y p2*/
   
