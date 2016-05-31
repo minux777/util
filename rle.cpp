@@ -4,7 +4,7 @@
 #include <sdsl/bp_support_sada.hpp>
 #include <iostream>
 #include "directcodes.h"//FTRep -- dacs
-#include "morton.h"// mdt-parse-morton
+#include "read_MDT.h"// mdt-parse-morton
 
 using namespace std;
 using namespace sdsl;

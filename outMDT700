@@ -1,0 +1,70 @@
+pow2:  8192
+no data:  -999
+min:  0
+max:  471
+new no data:  472
+size of zigzag encoder (bytes): 18512122
+
+query window size: 5x5
+Q1 :p1(2679, 3409) --- p2(2684, 3414)	access rq: 210	bad rq: 22	zdivide rq: 119	quadboxes rq: 142
+Q2 :p1(3111, 5524) --- p2(3116, 5529)	access rq: 146	bad rq: 22	zdivide rq: 40	quadboxes rq: 66
+Q3 :p1(1616, 664) --- p2(1621, 669)	access rq: 287	bad rq: 18	zdivide rq: 45	quadboxes rq: 54
+Q4 :p1(1325, 5088) --- p2(1330, 5093)	access rq: 171	bad rq: 41	zdivide rq: 51	quadboxes rq: 91
+Q5 :p1(1667, 4951) --- p2(1672, 4956)	access rq: 169	bad rq: 24	zdivide rq: 86	quadboxes rq: 105
+Q6 :p1(1052, 4099) --- p2(1057, 4104)	access rq: 345	bad rq: 291	zdivide rq: 147	quadboxes rq: 162
+Q7 :p1(581, 2104) --- p2(586, 2109)	access rq: 397	bad rq: 57	zdivide rq: 120	quadboxes rq: 207
+Q8 :p1(3137, 2281) --- p2(3142, 2286)	access rq: 320	bad rq: 19	zdivide rq: 182	quadboxes rq: 217
+Q9 :p1(797, 747) --- p2(802, 752)	access rq: 379	bad rq: 280	zdivide rq: 207	quadboxes rq: 264
+Q10 :p1(1043, 1540) --- p2(1048, 1545)	access rq: 282	bad rq: 36	zdivide rq: 75	quadboxes rq: 123
+average access range query: 270.6
+average bad range query: 81
+average zdidive range query: 107.2
+average quadboxes range query: 143.1
+
+query window size: 10x10
+Q1 :p1(2178, 5750) --- p2(2188, 5760)	access rq: 589	bad rq: 1025	zdivide rq: 145	quadboxes rq: 190
+Q2 :p1(1842, 528) --- p2(1852, 538)	access rq: 810	bad rq: 37	zdivide rq: 183	quadboxes rq: 244
+Q3 :p1(1864, 5561) --- p2(1874, 5571)	access rq: 524	bad rq: 296	zdivide rq: 130	quadboxes rq: 162
+Q4 :p1(697, 1759) --- p2(707, 1769)	access rq: 1364	bad rq: 1418	zdivide rq: 322	quadboxes rq: 412
+Q5 :p1(2454, 3772) --- p2(2464, 3782)	access rq: 718	bad rq: 470	zdivide rq: 178	quadboxes rq: 216
+Q6 :p1(3472, 2097) --- p2(3482, 2107)	access rq: 1317	bad rq: 62	zdivide rq: 326	quadboxes rq: 399
+Q7 :p1(3179, 300) --- p2(3189, 310)	access rq: 751	bad rq: 71	zdivide rq: 182	quadboxes rq: 231
+Q8 :p1(937, 4530) --- p2(947, 4540)	access rq: 788	bad rq: 53	zdivide rq: 188	quadboxes rq: 234
+Q9 :p1(2874, 2329) --- p2(2884, 2339)	access rq: 897	bad rq: 1073	zdivide rq: 223	quadboxes rq: 276
+Q10 :p1(2507, 5488) --- p2(2517, 5498)	access rq: 488	bad rq: 52	zdivide rq: 113	quadboxes rq: 149
+average access range query: 824.6
+average bad range query: 455.7
+average zdidive range query: 199
+average quadboxes range query: 251.3
+
+query window size: 20x20
+Q1 :p1(1729, 549) --- p2(1749, 569)	access rq: 2825	bad rq: 109	zdivide rq: 477	quadboxes rq: 615
+Q2 :p1(3056, 5303) --- p2(3076, 5323)	access rq: 1741	bad rq: 129437	zdivide rq: 220	quadboxes rq: 257
+Q3 :p1(3225, 4234) --- p2(3245, 4254)	access rq: 1721	bad rq: 180	zdivide rq: 322	quadboxes rq: 397
+Q4 :p1(2644, 2198) --- p2(2664, 2218)	access rq: 3241	bad rq: 325	zdivide rq: 489	quadboxes rq: 570
+Q5 :p1(3156, 3504) --- p2(3176, 3524)	access rq: 1672	bad rq: 419	zdivide rq: 192	quadboxes rq: 245
+Q6 :p1(1292, 127) --- p2(1312, 147)	access rq: 4607	bad rq: 2738	zdivide rq: 578	quadboxes rq: 682
+Q7 :p1(3026, 5381) --- p2(3046, 5401)	access rq: 1741	bad rq: 183	zdivide rq: 300	quadboxes rq: 387
+Q8 :p1(2072, 5121) --- p2(2092, 5141)	access rq: 1733	bad rq: 178	zdivide rq: 295	quadboxes rq: 344
+Q9 :p1(3305, 3569) --- p2(3325, 3589)	access rq: 1664	bad rq: 15898	zdivide rq: 308	quadboxes rq: 385
+Q10 :p1(2778, 3604) --- p2(2798, 3624)	access rq: 2683	bad rq: 312	zdivide rq: 351	quadboxes rq: 495
+average access range query: 2362.8
+average bad range query: 14977.9
+average zdidive range query: 353.2
+average quadboxes range query: 437.7
+
+query window size: 50x50
+Q1 :p1(444, 1665) --- p2(494, 1715)	access rq: 23714	bad rq: 1544	zdivide rq: 1958	quadboxes rq: 2343
+Q2 :p1(3705, 2841) --- p2(3755, 2891)	access rq: 13977	bad rq: 2571	zdivide rq: 1070	quadboxes rq: 1327
+Q3 :p1(1805, 3419) --- p2(1855, 3469)	access rq: 19533	bad rq: 1959	zdivide rq: 1456	quadboxes rq: 1715
+Q4 :p1(1230, 3819) --- p2(1280, 3869)	access rq: 25447	bad rq: 27001	zdivide rq: 2071	quadboxes rq: 2316
+Q5 :p1(3558, 1244) --- p2(3608, 1294)	access rq: 20171	bad rq: 79893	zdivide rq: 1633	quadboxes rq: 1924
+Q6 :p1(1786, 4014) --- p2(1836, 4064)	access rq: 17334	bad rq: 10468	zdivide rq: 1188	quadboxes rq: 1524
+Q7 :p1(3702, 3150) --- p2(3752, 3200)	access rq: 12937	bad rq: 3490	zdivide rq: 834	quadboxes rq: 1056
+Q8 :p1(163, 384) --- p2(213, 434)	access rq: 20678	bad rq: 990	zdivide rq: 1354	quadboxes rq: 1770
+Q9 :p1(7, 1157) --- p2(57, 1207)	access rq: 20941	bad rq: 552	zdivide rq: 1453	quadboxes rq: 1755
+Q10 :p1(3515, 2462) --- p2(3565, 2512)	access rq: 21613	bad rq: 1801	zdivide rq: 1514	quadboxes rq: 1897
+average access range query: 19634.5
+average bad range query: 13026.9
+average zdidive range query: 1453.1
+average quadboxes range query: 1762.7

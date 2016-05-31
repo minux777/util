@@ -1,137 +1,131 @@
-zigzag_encode.cpp: In function ‘int main(int, char**)’:
-zigzag_encode.cpp:51:9: warning: unused variable ‘matrix2’ [-Wunused-variable]
-   int **matrix2 = df.rangeQuery(x1,y1,x2,y2);  
-         ^
-zigzag_encode.cpp:58:9: warning: unused variable ‘matrix3’ [-Wunused-variable]
-   int **matrix3 = df.rectangle_query(x1,y1,x2,y2);
-         ^
-zigzag_encode.cpp:65:9: warning: unused variable ‘matrix1’ [-Wunused-variable]
-   int **matrix1 = df.dqb_range_query(x1,y1,x2,y2);
-         ^
-morton.cpp: In function ‘std::vector<std::pair<std::pair<int, int>, int> > decomposeWindow(int, int, int, int)’:
-morton.cpp:170:7: warning: unused variable ‘k’ [-Wunused-variable]
-   int k = 1;
-       ^
-directcodes.cpp: In function ‘unsigned int mypow(unsigned int, unsigned int)’:
-directcodes.cpp:68:13: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (i=0;i<exponente;i++){
-             ^
-directcodes.cpp: In function ‘ushort* optimizationk(unsigned int*, int, unsigned int*)’:
-directcodes.cpp:109:13: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for(i=1;i<=nBits;i++){
-             ^
-directcodes.cpp:118:10: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if(i==nBits)
-          ^
-directcodes.cpp:148:29: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   for(j=0;j<tableNLevels[i]-1;j++){
-                             ^
-directcodes.cpp:163:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for(j=0;j<tableNLevels[nBits];j++){
-                              ^
-directcodes.cpp:175:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if(j==tableNLevels[nBits])
-                            ^
-directcodes.cpp:198:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for(j=0;j<tableNLevels[nBits];j++){
-                              ^
-directcodes.cpp: In function ‘FTRep* createFT(unsigned int*, unsigned int)’:
-directcodes.cpp:357:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   for(j=0;j<rep->tamtablebase;j++)
-                  ^
-directcodes.cpp:364:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  while((j<rep->tamtablebase)&&(levelSizeAux[j]!=0)){
-                ^
-directcodes.cpp: In function ‘unsigned int accessFT(FTRep*, unsigned int)’:
-directcodes.cpp:562:16: warning: unused variable ‘i’ [-Wunused-variable]
-  register uint i;
-                ^
-directcodes.cpp:564:9: warning: unused variable ‘rankLevel’ [-Wunused-variable]
-  uint * rankLevel = listRep->rankLevels;
-         ^
-directcodes.cpp:565:9: warning: unused variable ‘list’ [-Wunused-variable]
-  byte * list;
-         ^
-directcodes.cpp:566:7: warning: unused variable ‘n’ [-Wunused-variable]
-  uint n , partialSum=0, sumAux=0;
-       ^
-directcodes.cpp:566:25: warning: unused variable ‘sumAux’ [-Wunused-variable]
-  uint n , partialSum=0, sumAux=0;
-                         ^
-directcodes.cpp:568:18: warning: unused variable ‘bS’ [-Wunused-variable]
-  bitRankW32Int * bS = listRep->bS;
-                  ^
-directcodes.cpp:569:9: warning: unused variable ‘bsData’ [-Wunused-variable]
-  uint * bsData = listRep->bS->data;
-         ^
-directcodes.cpp:571:7: warning: unused variable ‘levelIndex’ [-Wunused-variable]
-  uint levelIndex;
-       ^
-directcodes.cpp: In function ‘unsigned int* decompressFT(FTRep*, unsigned int)’:
-directcodes.cpp:656:21: warning: unused variable ‘sumAux’ [-Wunused-variable]
-  uint partialSum=0, sumAux=0;
-                     ^
-directcodes.cpp:657:7: warning: unused variable ‘ini’ [-Wunused-variable]
-  uint ini = 0;
-       ^
-directcodes.cpp:658:18: warning: unused variable ‘bS’ [-Wunused-variable]
-  bitRankW32Int * bS = listRep->bS;
-                  ^
-directcodes.cpp:659:9: warning: unused variable ‘bsData’ [-Wunused-variable]
-  uint * bsData = listRep->bS->data;
-         ^
-directcodes.cpp:661:7: warning: unused variable ‘levelIndex’ [-Wunused-variable]
-  uint levelIndex;
-       ^
-directcodes.cpp: In function ‘void saveFT(FTRep*, FILE*)’:
-directcodes.cpp:763:6: warning: unused variable ‘i’ [-Wunused-variable]
-  int i;
-      ^
-directcodes.cpp: In function ‘FTRep* loadFT(FILE*)’:
-directcodes.cpp:810:6: warning: unused variable ‘i’ [-Wunused-variable]
-  int i;
-      ^
-difftree.cpp: In member function ‘size_t DiffTree::searchTrace(int)’:
-difftree.cpp:313:63: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   while(traceStackPos > 1 && key > traceValues[traceStackPos-1]) {
-                                                               ^
-difftree.cpp: In member function ‘DiffTreeIterator DiffTree::accessIt(int)’:
-difftree.cpp:492:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   while(part != pos) {
-                 ^
-difftree.cpp:494:14: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if(pos < part) {
-              ^
-difftree.cpp: In member function ‘int** DiffTree::rangeQuery(unsigned int, unsigned int, unsigned int, unsigned int)’:
-difftree.cpp:568:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   for(int i = 0 ; i < rows; i++)
-                       ^
-difftree.cpp:574:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   for(int i = 0; i <= EncodeMorton2(x2, y2) + 1 - pos; i++){
-                                                   ^
-difftree.cpp:576:13: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if(x >= x1 && x <= x2 && y >= y1 && y <= y2)
-             ^
-difftree.cpp:576:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if(x >= x1 && x <= x2 && y >= y1 && y <= y2)
-                        ^
-difftree.cpp:576:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if(x >= x1 && x <= x2 && y >= y1 && y <= y2)
-                                   ^
-difftree.cpp:576:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if(x >= x1 && x <= x2 && y >= y1 && y <= y2)
-                                              ^
-difftree.cpp: In member function ‘int DiffTree::points_in_rectangle(std::pair<unsigned int, unsigned int>, int**, unsigned int, unsigned int, unsigned int, unsigned int)’:
-difftree.cpp:595:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
-difftree.cpp: In member function ‘int DiffTree::some_points_in_rectangle(std::pair<unsigned int, unsigned int>, int**, unsigned int, unsigned int, unsigned int)’:
-difftree.cpp:608:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   while(curr <= end){
-                 ^
-difftree.cpp:627:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
-/tmp/ccEG4sTg.o: In function `main':
-/home/ale/util/zigzag_encode.cpp:19: undefined reference to `read_MDT::read_morton_mdt(char const*, int)'
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 0 has invalid symbol index 11
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 1 has invalid symbol index 12
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 2 has invalid symbol index 2
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 3 has invalid symbol index 2
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 4 has invalid symbol index 11
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 5 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 6 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 7 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 8 has invalid symbol index 12
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 9 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 10 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 11 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 12 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 13 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 14 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 15 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 16 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 17 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 18 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 19 has invalid symbol index 21
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_line): relocation 0 has invalid symbol index 2
+/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+/tmp/ccntwNDW.o: In function `__static_initialization_and_destruction_0(int, int)':
+morton.cpp:(.text+0x620): undefined reference to `std::ios_base::Init::Init()'
+morton.cpp:(.text+0x62f): undefined reference to `std::ios_base::Init::~Init()'
+/tmp/ccntwNDW.o: In function `std::vector<std::pair<std::pair<int, int>, int>, std::allocator<std::pair<std::pair<int, int>, int> > >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::pair<std::pair<int, int>, int>*, std::vector<std::pair<std::pair<int, int>, int>, std::allocator<std::pair<std::pair<int, int>, int> > > >, std::pair<std::pair<int, int>, int> const&)':
+morton.cpp:(.text._ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS2_S4_EERKS2_[_ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS2_S4_EERKS2_]+0x28d): undefined reference to `__cxa_end_catch'
+morton.cpp:(.text._ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS2_S4_EERKS2_[_ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS2_S4_EERKS2_]+0x2a0): undefined reference to `__cxa_begin_catch'
+morton.cpp:(.text._ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS2_S4_EERKS2_[_ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS2_S4_EERKS2_]+0x311): undefined reference to `__cxa_rethrow'
+/tmp/ccntwNDW.o: In function `std::vector<std::pair<std::pair<int, int>, int>, std::allocator<std::pair<std::pair<int, int>, int> > >::_M_check_len(unsigned long, char const*) const':
+morton.cpp:(.text._ZNKSt6vectorISt4pairIS0_IiiEiESaIS2_EE12_M_check_lenEmPKc[_ZNKSt6vectorISt4pairIS0_IiiEiESaIS2_EE12_M_check_lenEmPKc]+0x4c): undefined reference to `std::__throw_length_error(char const*)'
+/tmp/ccntwNDW.o: In function `__gnu_cxx::new_allocator<std::pair<std::pair<int, int>, int> >::deallocate(std::pair<std::pair<int, int>, int>*, unsigned long)':
+morton.cpp:(.text._ZN9__gnu_cxx13new_allocatorISt4pairIS1_IiiEiEE10deallocateEPS3_m[_ZN9__gnu_cxx13new_allocatorISt4pairIS1_IiiEiEE10deallocateEPS3_m]+0x1c): undefined reference to `operator delete(void*)'
+/tmp/ccntwNDW.o: In function `__gnu_cxx::new_allocator<std::pair<std::pair<int, int>, int> >::allocate(unsigned long, void const*)':
+morton.cpp:(.text._ZN9__gnu_cxx13new_allocatorISt4pairIS1_IiiEiEE8allocateEmPKv[_ZN9__gnu_cxx13new_allocatorISt4pairIS1_IiiEiEE8allocateEmPKv]+0x2c): undefined reference to `std::__throw_bad_alloc()'
+morton.cpp:(.text._ZN9__gnu_cxx13new_allocatorISt4pairIS1_IiiEiEE8allocateEmPKv[_ZN9__gnu_cxx13new_allocatorISt4pairIS1_IiiEiEE8allocateEmPKv]+0x45): undefined reference to `operator new(unsigned long)'
+/tmp/ccntwNDW.o:(.eh_frame+0x12b): undefined reference to `__gxx_personality_v0'
+/tmp/cc4u5CwP.o: In function `read_MDT::read_morton_mdt(char const*, int)':
+read_MDT.cpp:(.text+0x167): undefined reference to `log2'
+read_MDT.cpp:(.text+0x18a): undefined reference to `ceil'
+read_MDT.cpp:(.text+0x1c6): undefined reference to `pow'
+/tmp/cc4u5CwP.o: In function `__static_initialization_and_destruction_0(int, int)':
+read_MDT.cpp:(.text+0x94e): undefined reference to `std::ios_base::Init::Init()'
+read_MDT.cpp:(.text+0x95d): undefined reference to `std::ios_base::Init::~Init()'
+/tmp/cc4u5CwP.o: In function `std::_Rb_tree_iterator<std::pair<unsigned int const, int> >::operator++(int)':
+read_MDT.cpp:(.text._ZNSt17_Rb_tree_iteratorISt4pairIKjiEEppEi[_ZNSt17_Rb_tree_iteratorISt4pairIKjiEEppEi]+0x25): undefined reference to `std::_Rb_tree_increment(std::_Rb_tree_node_base*)'
+/tmp/cc4u5CwP.o: In function `int* std::vector<int, std::allocator<int> >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > > >(unsigned long, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >)':
+read_MDT.cpp:(.text._ZNSt6vectorIiSaIiEE20_M_allocate_and_copyIN9__gnu_cxx17__normal_iteratorIPKiS1_EEEEPimT_S9_[_ZNSt6vectorIiSaIiEE20_M_allocate_and_copyIN9__gnu_cxx17__normal_iteratorIPKiS1_EEEEPimT_S9_]+0x5d): undefined reference to `__cxa_end_catch'
+read_MDT.cpp:(.text._ZNSt6vectorIiSaIiEE20_M_allocate_and_copyIN9__gnu_cxx17__normal_iteratorIPKiS1_EEEEPimT_S9_[_ZNSt6vectorIiSaIiEE20_M_allocate_and_copyIN9__gnu_cxx17__normal_iteratorIPKiS1_EEEEPimT_S9_]+0x70): undefined reference to `__cxa_begin_catch'
+read_MDT.cpp:(.text._ZNSt6vectorIiSaIiEE20_M_allocate_and_copyIN9__gnu_cxx17__normal_iteratorIPKiS1_EEEEPimT_S9_[_ZNSt6vectorIiSaIiEE20_M_allocate_and_copyIN9__gnu_cxx17__normal_iteratorIPKiS1_EEEEPimT_S9_]+0x8c): undefined reference to `__cxa_rethrow'
+/tmp/cc4u5CwP.o: In function `std::vector<int, std::allocator<int> >::_M_insert_aux(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&)':
+read_MDT.cpp:(.text._ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPiS1_EERKi[_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPiS1_EERKi]+0x25c): undefined reference to `__cxa_end_catch'
+read_MDT.cpp:(.text._ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPiS1_EERKi[_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPiS1_EERKi]+0x26f): undefined reference to `__cxa_begin_catch'
+read_MDT.cpp:(.text._ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPiS1_EERKi[_ZNSt6vectorIiSaIiEE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPiS1_EERKi]+0x2d8): undefined reference to `__cxa_rethrow'
+/tmp/cc4u5CwP.o: In function `__gnu_cxx::new_allocator<int>::deallocate(int*, unsigned long)':
+read_MDT.cpp:(.text._ZN9__gnu_cxx13new_allocatorIiE10deallocateEPim[_ZN9__gnu_cxx13new_allocatorIiE10deallocateEPim]+0x1c): undefined reference to `operator delete(void*)'
+/tmp/cc4u5CwP.o: In function `std::vector<int, std::allocator<int> >::_M_check_len(unsigned long, char const*) const':
+read_MDT.cpp:(.text._ZNKSt6vectorIiSaIiEE12_M_check_lenEmPKc[_ZNKSt6vectorIiSaIiEE12_M_check_lenEmPKc]+0x4c): undefined reference to `std::__throw_length_error(char const*)'
+/tmp/cc4u5CwP.o: In function `__gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*)':
+read_MDT.cpp:(.text._ZN9__gnu_cxx13new_allocatorIiE8allocateEmPKv[_ZN9__gnu_cxx13new_allocatorIiE8allocateEmPKv]+0x2c): undefined reference to `std::__throw_bad_alloc()'
+read_MDT.cpp:(.text._ZN9__gnu_cxx13new_allocatorIiE8allocateEmPKv[_ZN9__gnu_cxx13new_allocatorIiE8allocateEmPKv]+0x3c): undefined reference to `operator new(unsigned long)'
+/tmp/cc4u5CwP.o: In function `std::_Rb_tree<unsigned int, std::pair<unsigned int const, int>, std::_Select1st<std::pair<unsigned int const, int> >, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, int> > >::_M_insert_(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<unsigned int const, int> const&)':
+read_MDT.cpp:(.text._ZNSt8_Rb_treeIjSt4pairIKjiESt10_Select1stIS2_ESt4lessIjESaIS2_EE10_M_insert_EPSt18_Rb_tree_node_baseSA_RKS2_[_ZNSt8_Rb_treeIjSt4pairIKjiESt10_Select1stIS2_ESt4lessIjESaIS2_EE10_M_insert_EPSt18_Rb_tree_node_baseSA_RKS2_]+0xb9): undefined reference to `std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)'
+/tmp/cc4u5CwP.o: In function `__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<unsigned int const, int> > >::deallocate(std::_Rb_tree_node<std::pair<unsigned int const, int> >*, unsigned long)':
+read_MDT.cpp:(.text._ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKjiEEE10deallocateEPS5_m[_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKjiEEE10deallocateEPS5_m]+0x1c): undefined reference to `operator delete(void*)'
+/tmp/cc4u5CwP.o: In function `std::_Rb_tree_iterator<std::pair<unsigned int const, int> >::operator--()':
+read_MDT.cpp:(.text._ZNSt17_Rb_tree_iteratorISt4pairIKjiEEmmEv[_ZNSt17_Rb_tree_iteratorISt4pairIKjiEEmmEv]+0x17): undefined reference to `std::_Rb_tree_decrement(std::_Rb_tree_node_base*)'
+/tmp/cc4u5CwP.o: In function `std::_Rb_tree_iterator<std::pair<unsigned int const, int> >::operator++()':
+read_MDT.cpp:(.text._ZNSt17_Rb_tree_iteratorISt4pairIKjiEEppEv[_ZNSt17_Rb_tree_iteratorISt4pairIKjiEEppEv]+0x17): undefined reference to `std::_Rb_tree_increment(std::_Rb_tree_node_base*)'
+/tmp/cc4u5CwP.o: In function `__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<unsigned int const, int> > >::allocate(unsigned long, void const*)':
+read_MDT.cpp:(.text._ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKjiEEE8allocateEmPKv[_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKjiEEE8allocateEmPKv]+0x2c): undefined reference to `std::__throw_bad_alloc()'
+read_MDT.cpp:(.text._ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKjiEEE8allocateEmPKv[_ZN9__gnu_cxx13new_allocatorISt13_Rb_tree_nodeISt4pairIKjiEEE8allocateEmPKv]+0x46): undefined reference to `operator new(unsigned long)'
+/tmp/cc4u5CwP.o:(.eh_frame+0x6b): undefined reference to `__gxx_personality_v0'
+/tmp/cct6vkaq.o: In function `DiffTree::DiffTree(std::vector<int, std::allocator<int> >, unsigned long)':
+difftree.cpp:(.text+0x10f): undefined reference to `operator new[](unsigned long)'
+difftree.cpp:(.text+0x46a): undefined reference to `operator new[](unsigned long)'
+difftree.cpp:(.text+0x562): undefined reference to `operator delete[](void*)'
+difftree.cpp:(.text+0x59a): undefined reference to `operator new[](unsigned long)'
+difftree.cpp:(.text+0x5dd): undefined reference to `operator new[](unsigned long)'
+/tmp/cct6vkaq.o: In function `DiffTree::~DiffTree()':
+difftree.cpp:(.text+0x6ab): undefined reference to `operator delete[](void*)'
+difftree.cpp:(.text+0x6c8): undefined reference to `operator delete[](void*)'
+difftree.cpp:(.text+0x6e5): undefined reference to `operator delete[](void*)'
+/tmp/cct6vkaq.o: In function `DiffTree::dqb_range_query(unsigned int, unsigned int, unsigned int, unsigned int)':
+difftree.cpp:(.text+0x163b): undefined reference to `std::cout'
+difftree.cpp:(.text+0x1640): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+difftree.cpp:(.text+0x1645): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+difftree.cpp:(.text+0x164d): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+/tmp/cct6vkaq.o: In function `__static_initialization_and_destruction_0(int, int)':
+difftree.cpp:(.text+0x18d5): undefined reference to `std::ios_base::Init::Init()'
+difftree.cpp:(.text+0x18e4): undefined reference to `std::ios_base::Init::~Init()'
+/tmp/cct6vkaq.o: In function `std::vector<int, std::allocator<int> >::_M_range_check(unsigned long) const':
+difftree.cpp:(.text._ZNKSt6vectorIiSaIiEE14_M_range_checkEm[_ZNKSt6vectorIiSaIiEE14_M_range_checkEm]+0x2d): undefined reference to `std::__throw_out_of_range(char const*)'
+/tmp/cct6vkaq.o: In function `std::pair<std::pair<int, int>, int>* std::vector<std::pair<std::pair<int, int>, int>, std::allocator<std::pair<std::pair<int, int>, int> > >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<std::pair<std::pair<int, int>, int> const*, std::vector<std::pair<std::pair<int, int>, int>, std::allocator<std::pair<std::pair<int, int>, int> > > > >(unsigned long, __gnu_cxx::__normal_iterator<std::pair<std::pair<int, int>, int> const*, std::vector<std::pair<std::pair<int, int>, int>, std::allocator<std::pair<std::pair<int, int>, int> > > >, __gnu_cxx::__normal_iterator<std::pair<std::pair<int, int>, int> const*, std::vector<std::pair<std::pair<int, int>, int>, std::allocator<std::pair<std::pair<int, int>, int> > > >)':
+difftree.cpp:(.text._ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EE20_M_allocate_and_copyIN9__gnu_cxx17__normal_iteratorIPKS2_S4_EEEEPS2_mT_SC_[_ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EE20_M_allocate_and_copyIN9__gnu_cxx17__normal_iteratorIPKS2_S4_EEEEPS2_mT_SC_]+0x5d): undefined reference to `__cxa_end_catch'
+difftree.cpp:(.text._ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EE20_M_allocate_and_copyIN9__gnu_cxx17__normal_iteratorIPKS2_S4_EEEEPS2_mT_SC_[_ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EE20_M_allocate_and_copyIN9__gnu_cxx17__normal_iteratorIPKS2_S4_EEEEPS2_mT_SC_]+0x70): undefined reference to `__cxa_begin_catch'
+difftree.cpp:(.text._ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EE20_M_allocate_and_copyIN9__gnu_cxx17__normal_iteratorIPKS2_S4_EEEEPS2_mT_SC_[_ZNSt6vectorISt4pairIS0_IiiEiESaIS2_EE20_M_allocate_and_copyIN9__gnu_cxx17__normal_iteratorIPKS2_S4_EEEEPS2_mT_SC_]+0x8c): undefined reference to `__cxa_rethrow'
+/tmp/cct6vkaq.o: In function `std::_Deque_base<std::pair<unsigned long, unsigned long>, std::allocator<std::pair<unsigned long, unsigned long> > >::_M_initialize_map(unsigned long)':
+difftree.cpp:(.text._ZNSt11_Deque_baseISt4pairImmESaIS1_EE17_M_initialize_mapEm[_ZNSt11_Deque_baseISt4pairImmESaIS1_EE17_M_initialize_mapEm]+0x150): undefined reference to `__cxa_end_catch'
+difftree.cpp:(.text._ZNSt11_Deque_baseISt4pairImmESaIS1_EE17_M_initialize_mapEm[_ZNSt11_Deque_baseISt4pairImmESaIS1_EE17_M_initialize_mapEm]+0x163): undefined reference to `__cxa_begin_catch'
+difftree.cpp:(.text._ZNSt11_Deque_baseISt4pairImmESaIS1_EE17_M_initialize_mapEm[_ZNSt11_Deque_baseISt4pairImmESaIS1_EE17_M_initialize_mapEm]+0x19d): undefined reference to `__cxa_rethrow'
+/tmp/cct6vkaq.o: In function `std::deque<std::pair<unsigned long, unsigned long>, std::allocator<std::pair<unsigned long, unsigned long> > >::_M_push_back_aux(std::pair<unsigned long, unsigned long> const&)':
+difftree.cpp:(.text._ZNSt5dequeISt4pairImmESaIS1_EE16_M_push_back_auxERKS1_[_ZNSt5dequeISt4pairImmESaIS1_EE16_M_push_back_auxERKS1_]+0x8d): undefined reference to `__cxa_end_catch'
+difftree.cpp:(.text._ZNSt5dequeISt4pairImmESaIS1_EE16_M_push_back_auxERKS1_[_ZNSt5dequeISt4pairImmESaIS1_EE16_M_push_back_auxERKS1_]+0xa0): undefined reference to `__cxa_begin_catch'
+difftree.cpp:(.text._ZNSt5dequeISt4pairImmESaIS1_EE16_M_push_back_auxERKS1_[_ZNSt5dequeISt4pairImmESaIS1_EE16_M_push_back_auxERKS1_]+0xc3): undefined reference to `__cxa_rethrow'
+/tmp/cct6vkaq.o: In function `std::_Deque_base<std::pair<unsigned long, unsigned long>, std::allocator<std::pair<unsigned long, unsigned long> > >::_M_create_nodes(std::pair<unsigned long, unsigned long>**, std::pair<unsigned long, unsigned long>**)':
+difftree.cpp:(.text._ZNSt11_Deque_baseISt4pairImmESaIS1_EE15_M_create_nodesEPPS1_S5_[_ZNSt11_Deque_baseISt4pairImmESaIS1_EE15_M_create_nodesEPPS1_S5_]+0x47): undefined reference to `__cxa_end_catch'
+difftree.cpp:(.text._ZNSt11_Deque_baseISt4pairImmESaIS1_EE15_M_create_nodesEPPS1_S5_[_ZNSt11_Deque_baseISt4pairImmESaIS1_EE15_M_create_nodesEPPS1_S5_]+0x5a): undefined reference to `__cxa_begin_catch'
+difftree.cpp:(.text._ZNSt11_Deque_baseISt4pairImmESaIS1_EE15_M_create_nodesEPPS1_S5_[_ZNSt11_Deque_baseISt4pairImmESaIS1_EE15_M_create_nodesEPPS1_S5_]+0x76): undefined reference to `__cxa_rethrow'
+/tmp/cct6vkaq.o: In function `__gnu_cxx::new_allocator<std::pair<unsigned long, unsigned long>*>::deallocate(std::pair<unsigned long, unsigned long>**, unsigned long)':
+difftree.cpp:(.text._ZN9__gnu_cxx13new_allocatorIPSt4pairImmEE10deallocateEPS3_m[_ZN9__gnu_cxx13new_allocatorIPSt4pairImmEE10deallocateEPS3_m]+0x1c): undefined reference to `operator delete(void*)'
+/tmp/cct6vkaq.o: In function `__gnu_cxx::new_allocator<std::pair<unsigned long, unsigned long>*>::allocate(unsigned long, void const*)':
+difftree.cpp:(.text._ZN9__gnu_cxx13new_allocatorIPSt4pairImmEE8allocateEmPKv[_ZN9__gnu_cxx13new_allocatorIPSt4pairImmEE8allocateEmPKv]+0x2c): undefined reference to `std::__throw_bad_alloc()'
+difftree.cpp:(.text._ZN9__gnu_cxx13new_allocatorIPSt4pairImmEE8allocateEmPKv[_ZN9__gnu_cxx13new_allocatorIPSt4pairImmEE8allocateEmPKv]+0x3c): undefined reference to `operator new(unsigned long)'
+/tmp/cct6vkaq.o: In function `__gnu_cxx::new_allocator<std::pair<unsigned long, unsigned long> >::deallocate(std::pair<unsigned long, unsigned long>*, unsigned long)':
+difftree.cpp:(.text._ZN9__gnu_cxx13new_allocatorISt4pairImmEE10deallocateEPS2_m[_ZN9__gnu_cxx13new_allocatorISt4pairImmEE10deallocateEPS2_m]+0x1c): undefined reference to `operator delete(void*)'
+/tmp/cct6vkaq.o: In function `std::_Deque_iterator<std::pair<unsigned long, unsigned long>, std::pair<unsigned long, unsigned long>&, std::pair<unsigned long, unsigned long>*> std::__uninitialized_copy<false>::__uninit_copy<std::_Deque_iterator<std::pair<unsigned long, unsigned long>, std::pair<unsigned long, unsigned long> const&, std::pair<unsigned long, unsigned long> const*>, std::_Deque_iterator<std::pair<unsigned long, unsigned long>, std::pair<unsigned long, unsigned long>&, std::pair<unsigned long, unsigned long>*> >(std::_Deque_iterator<std::pair<unsigned long, unsigned long>, std::pair<unsigned long, unsigned long> const&, std::pair<unsigned long, unsigned long> const*>, std::_Deque_iterator<std::pair<unsigned long, unsigned long>, std::pair<unsigned long, unsigned long> const&, std::pair<unsigned long, unsigned long> const*>, std::_Deque_iterator<std::pair<unsigned long, unsigned long>, std::pair<unsigned long, unsigned long>&, std::pair<unsigned long, unsigned long>*>)':
+difftree.cpp:(.text._ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt15_Deque_iteratorISt4pairImmERKS4_PS5_ES2_IS4_RS4_PS4_EEET0_T_SD_SC_[_ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt15_Deque_iteratorISt4pairImmERKS4_PS5_ES2_IS4_RS4_PS4_EEET0_T_SD_SC_]+0x80): undefined reference to `__cxa_end_catch'
+difftree.cpp:(.text._ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt15_Deque_iteratorISt4pairImmERKS4_PS5_ES2_IS4_RS4_PS4_EEET0_T_SD_SC_[_ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt15_Deque_iteratorISt4pairImmERKS4_PS5_ES2_IS4_RS4_PS4_EEET0_T_SD_SC_]+0x93): undefined reference to `__cxa_begin_catch'
+difftree.cpp:(.text._ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt15_Deque_iteratorISt4pairImmERKS4_PS5_ES2_IS4_RS4_PS4_EEET0_T_SD_SC_[_ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt15_Deque_iteratorISt4pairImmERKS4_PS5_ES2_IS4_RS4_PS4_EEET0_T_SD_SC_]+0xd1): undefined reference to `__cxa_rethrow'
+/tmp/cct6vkaq.o: In function `__gnu_cxx::new_allocator<std::pair<unsigned long, unsigned long> >::allocate(unsigned long, void const*)':
+difftree.cpp:(.text._ZN9__gnu_cxx13new_allocatorISt4pairImmEE8allocateEmPKv[_ZN9__gnu_cxx13new_allocatorISt4pairImmEE8allocateEmPKv]+0x2c): undefined reference to `std::__throw_bad_alloc()'
+difftree.cpp:(.text._ZN9__gnu_cxx13new_allocatorISt4pairImmEE8allocateEmPKv[_ZN9__gnu_cxx13new_allocatorISt4pairImmEE8allocateEmPKv]+0x3c): undefined reference to `operator new(unsigned long)'
+/tmp/cct6vkaq.o: In function `std::pair<std::pair<int, int>, int>* std::__uninitialized_copy<false>::__uninit_copy<__gnu_cxx::__normal_iterator<std::pair<std::pair<int, int>, int> const*, std::vector<std::pair<std::pair<int, int>, int>, std::allocator<std::pair<std::pair<int, int>, int> > > >, std::pair<std::pair<int, int>, int>*>(__gnu_cxx::__normal_iterator<std::pair<std::pair<int, int>, int> const*, std::vector<std::pair<std::pair<int, int>, int>, std::allocator<std::pair<std::pair<int, int>, int> > > >, __gnu_cxx::__normal_iterator<std::pair<std::pair<int, int>, int> const*, std::vector<std::pair<std::pair<int, int>, int>, std::allocator<std::pair<std::pair<int, int>, int> > > >, std::pair<std::pair<int, int>, int>*)':
+difftree.cpp:(.text._ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKSt4pairIS4_IiiEiESt6vectorIS6_SaIS6_EEEEPS6_EET0_T_SF_SE_[_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKSt4pairIS4_IiiEiESt6vectorIS6_SaIS6_EEEEPS6_EET0_T_SF_SE_]+0x77): undefined reference to `__cxa_end_catch'
+difftree.cpp:(.text._ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKSt4pairIS4_IiiEiESt6vectorIS6_SaIS6_EEEEPS6_EET0_T_SF_SE_[_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKSt4pairIS4_IiiEiESt6vectorIS6_SaIS6_EEEEPS6_EET0_T_SF_SE_]+0x8a): undefined reference to `__cxa_begin_catch'
+difftree.cpp:(.text._ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKSt4pairIS4_IiiEiESt6vectorIS6_SaIS6_EEEEPS6_EET0_T_SF_SE_[_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKSt4pairIS4_IiiEiESt6vectorIS6_SaIS6_EEEEPS6_EET0_T_SF_SE_]+0xa2): undefined reference to `__cxa_rethrow'
+/tmp/cct6vkaq.o:(.eh_frame+0x10b): undefined reference to `__gxx_personality_v0'
 collect2: error: ld returned 1 exit status
+make: *** [zigzag_encode] Error 1

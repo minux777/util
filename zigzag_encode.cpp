@@ -1,14 +1,13 @@
-#include <sdsl/vectors.hpp>
+//#include <sdsl/vectors.hpp>
 #include <vector>
-#include <sdsl/bit_vectors.hpp>
-#include <sdsl/bp_support_sada.hpp>
+//#include <sdsl/bit_vectors.hpp>
+//#include <sdsl/bp_support_sada.hpp>
 #include <iostream>
-//#include "morton.h"// mdt-parse-morton
-#include "read_MDT.h"
-#include "difftree.h"//diferencial encoder
+#include "headers/read_MDT.h"//mdt-parse-morton
+#include "headers/difftree.h"//diferencial encoder
 
 using namespace std;
-using namespace sdsl;
+//using namespace sdsl;
 
 int main(int argc, char * argv[]){
   if(argc < 3){
@@ -21,76 +20,72 @@ int main(int argc, char * argv[]){
   DiffTree df(V, 0);//binary heap embbeding
   cout << "size of zigzag encoder (bytes): " << df.getSize() << endl;
   
-  int x1, x2, y1, y2;
-  x1 = (rand() % 4001);//filas MDT500
-  x2 = x1 + 50;//rand() % 4001;
-  y1 = (rand() % 5841);//columnas MDT500
-  y2 = y1 + 50;//rand() % 5841;
-  cout << "p1: ("<< x1 << ", " << y1 << ")" << endl;
-  cout << "p2: ("<< x2 << ", " << y2 << ")" << endl;
-  
-  struct timeval start, end;
+  int x1, x2, y1, y2, w, h;
 
-  gettimeofday(&start, NULL);  
-  int cols = y2 - y1 + 1;
-  int rows = x2 - x1 + 1;
+  int sizes[] = {5, 10, 20, 50};
+  for(int p = 0; p < 4; p++){
+    w = h = sizes[p];
+    cout << endl << "query window size: " << w << "x" << h << endl;
+    int times = 10;
+    double average_arq = 0, average_brq = 0, average_zdrq = 0, average_qbrq = 0;
+    while(times--){
+      x1 = (rand() % reader.get_rows());
+      x2 = x1 + h;//height
+      y1 = (rand() % reader.get_cols());
+      y2 = y1 + w;//width
+      
+      cout << "Q" << 10 - times << " :";
+      cout << "p1("<< x1 << ", " << y1 << ") ---\t";
+      cout << "p2("<< x2 << ", " << y2 << ")" << "\t";
+    
+      struct timeval start, end;
 
-  int ** matrix0 = (int**)malloc(rows * sizeof(int *));
-  for(int i = 0; i < rows; i++)
-    matrix0[i] = (int*)malloc(cols * sizeof(int)) ;
-  for(int i = 0; i < rows; i++)
-    for(int j = 0; j < cols; j++)
-      matrix0[i][j] = df.access(x1 + i,y1 + j);
-  
-  gettimeofday(&end, NULL);
-  printf("access range query: %ldus\n",
-	 end.tv_usec - start.tv_usec +  (end.tv_sec - start.tv_sec) *  1000000);
-  
-  
-  gettimeofday(&start, NULL);
-  int **matrix2 = df.rangeQuery(x1,y1,x2,y2);  
-  gettimeofday(&end, NULL);
-  printf("bad range query: %ldus\n",
-	 end.tv_usec - start.tv_usec +  (end.tv_sec - start.tv_sec) *  1000000);
- 
-  
-  gettimeofday(&start, NULL);
-  int **matrix3 = df.rectangle_query(x1,y1,x2,y2);
-  gettimeofday(&end, NULL);
-  printf("zdivide range query: %ldus\n",
-	 end.tv_usec - start.tv_usec +  (end.tv_sec - start.tv_sec) *  1000000);
+      gettimeofday(&start, NULL);  
+      int cols = y2 - y1 + 1;
+      int rows = x2 - x1 + 1;
+      int ** matrix0 = (int**)malloc(rows * sizeof(int *));
+      for(int i = 0; i < rows; i++)
+	matrix0[i] = (int*)malloc(cols * sizeof(int)) ;
+      for(int i = 0; i < rows; i++)
+	for(int j = 0; j < cols; j++)
+	  matrix0[i][j] = df.access(x1 + i,y1 + j);
+      gettimeofday(&end, NULL);
+      double temp_time = (double)end.tv_usec - (double)start.tv_usec +  ((double)end.tv_sec - (double)start.tv_sec) *  1000000;
+      average_arq += temp_time;
+      cout << "access rq: " << temp_time << "\t";
+
+      gettimeofday(&start, NULL);
+      int **matrix1 = df.rangeQuery(x1,y1,x2,y2);  
+      gettimeofday(&end, NULL);
+      temp_time = (double)end.tv_usec - (double)start.tv_usec +  ((double)end.tv_sec - (double)start.tv_sec) *  1000000;     
+      average_brq += temp_time;
+      cout << "bad rq: " << temp_time << "\t";
 
 
-  gettimeofday(&start, NULL);
-  int **matrix1 = df.dqb_range_query(x1,y1,x2,y2);
-  gettimeofday(&end, NULL);
-  printf("quadboxes descomposition range query: %ldus\n",
-	 end.tv_usec - start.tv_usec +  (end.tv_sec - start.tv_sec) *  1000000);
+      gettimeofday(&start, NULL);
+      int **matrix2 = df.rectangle_query(x1,y1,x2,y2);
+      gettimeofday(&end, NULL);
+      temp_time = (double)end.tv_usec - (double)start.tv_usec +  ((double)end.tv_sec - (double)start.tv_sec) *  1000000;   
+      average_zdrq += temp_time;
+      cout << "zdivide rq: " << temp_time << "\t";
+      
+      gettimeofday(&start, NULL);
+      int **matrix3 = df.dqb_range_query(x1,y1,x2,y2);
+      gettimeofday(&end, NULL);
+      temp_time = (double)end.tv_usec - (double)start.tv_usec +  ((double)end.tv_sec - (double)start.tv_sec) *  1000000;
+      average_qbrq += temp_time;
+      cout << "quadboxes rq: " << temp_time << endl;
 
-  
-  
-  
-  /*cout << endl << "quadbox_desc" << endl;
-  for(int i = 0; i < x2 - x1 + 1; i++){
-    for(int j = 0; j < y2 - y1 + 1; j++)
-      cout << ((matrix0[i][j] != matrix1[i][j])?"x":"o" )<< " ";
-    cout << endl;
+      free(matrix0);
+      free(matrix1);
+      free(matrix2);
+      free(matrix3);
     }
+    cout << "average access range query: " << (average_arq / 10) << endl;
+    cout << "average bad range query: " << (average_brq / 10) << endl;
+    cout << "average zdidive range query: " << (average_zdrq / 10) << endl;
+    cout << "average quadboxes range query: " << (average_qbrq / 10) << endl;
 
- cout << endl << "naive" << endl;
-  for(int i = 0; i < x2 - x1 + 1; i++){
-    for(int j = 0; j < y2 - y1 + 1; j++)
-      cout << ((matrix0[i][j] != matrix2[i][j])?"x":"o" )<< " ";
-    cout << endl;
   }
-
- cout << endl << "zdivide" << endl;
-  for(int i = 0; i < x2 - x1 + 1; i++){
-    for(int j = 0; j < y2 - y1 + 1; j++)
-      cout << ((matrix0[i][j] != matrix3[i][j])?"x":"o" )<< " ";
-    cout << endl;
-  }
-  */
   return 0;
 }
-
