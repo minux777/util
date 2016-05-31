@@ -1,3 +1,0 @@
-zigzag_encode: zigzag_encode.cpp headers/morton.cpp headers/read_MDT.cpp headers/bitrankw32intkTree.cpp headers/directcodes.cpp headers/basickTree.cpp headers/difftree.cpp headers/morton.h headers/read_MDT.h headers/bitrankw32intkTree.h headers/directcodes.h headers/basickTree.h headers/difftree.h
-	g++ -o zigzag2 headers/morton.cpp headers/read_MDT.cpp headers/bitrankw32intkTree.cpp headers/directcodes.cpp headers/basickTree.cpp headers/difftree.cpp
-

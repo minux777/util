@@ -3,8 +3,8 @@
 #include <sdsl/bit_vectors.hpp>
 #include <sdsl/bp_support_sada.hpp>
 #include <iostream>
-#include "directcodes.h"//FTRep -- dacs
-#include "read_MDT.h"// mdt-parse-morton
+#include "headers/directcodes.h"//FTRep -- dacs
+#include "headers/read_MDT.h"// mdt-parse-morton
 
 using namespace std;
 using namespace sdsl;
@@ -20,8 +20,8 @@ int main(int argc, char * argv[]){
     cout << "use: " << argv[0] << " <filename> <0|1>" << endl;
     return -1;
   }
-  
-  vector <int> V = read_morton_mdt(argv[1], atoi(argv[2]));//hay que cambiar esta funcion para que devielva el no data value
+  read_MDT reader;
+  vector <int> V = reader.read_morton_mdt(argv[1], atoi(argv[2]));
   calc_differences(V, -999);
   rle(V);
 }

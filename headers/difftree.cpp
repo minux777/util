@@ -22,7 +22,6 @@
 #include <iostream>
 
 #include "difftree.h"
-#include "morton.h"
 
 DiffTree::DiffTree(vector<int> _v, size_t _noEncodedLen) {
   /* We first create a copy of the vector and sort the

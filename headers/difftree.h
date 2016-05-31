@@ -28,6 +28,7 @@
 #include<cmath>
 
 #include "directcodes.h"
+#include "morton.h"
 
 #define isroot(p) (p==1)
 #define isleft(p) (!(p%2))
