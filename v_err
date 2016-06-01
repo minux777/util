@@ -1,0 +1,73 @@
+==28127== Callgrind, a call-graph generating cache profiler
+==28127== Copyright (C) 2002-2013, and GNU GPL'd, by Josef Weidendorfer et al.
+==28127== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==28127== Command: ./debug_zigzag_encode.x ../datasets/MDT05-0500-H29.asc 1
+==28127== 
+--28127-- Valgrind options:
+--28127--    --tool=callgrind
+--28127--    -v
+--28127-- Contents of /proc/version:
+--28127--   Linux version 3.13.0-86-generic (buildd@lgw01-51) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #131-Ubuntu SMP Thu May 12 23:33:13 UTC 2016
+--28127-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-rdtscp-sse3-avx
+--28127-- Page sizes: currently 4096, max supported 4096
+--28127-- Valgrind library directory: /usr/lib/valgrind
+==28127== For interactive control, run 'callgrind_control -h'.
+--28127-- Reading syms from /home/ale/util/debug_zigzag_encode.x
+--28127-- Reading syms from /lib/x86_64-linux-gnu/ld-2.19.so
+--28127--   Considering /lib/x86_64-linux-gnu/ld-2.19.so ..
+--28127--   .. CRC mismatch (computed ef2bc4a1 wanted 12987a55)
+--28127--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.19.so ..
+--28127--   .. CRC is valid
+--28127-- Reading syms from /usr/lib/valgrind/callgrind-amd64-linux
+--28127--   Considering /usr/lib/valgrind/callgrind-amd64-linux ..
+--28127--   .. CRC mismatch (computed cd281af7 wanted d8f13d15)
+--28127--    object doesn't have a symbol table
+--28127--    object doesn't have a dynamic symbol table
+--28127-- Scheduler: using generic scheduler lock implementation.
+==28127== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-28127-by-ale-on-???
+==28127== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-28127-by-ale-on-???
+==28127== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-28127-by-ale-on-???
+==28127== 
+==28127== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==28127== don't want to do, unless you know exactly what you're doing,
+==28127== or are doing some strange experiment):
+==28127==   /usr/lib/valgrind/../../bin/vgdb --pid=28127 ...command...
+==28127== 
+==28127== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==28127==   /path/to/gdb ./debug_zigzag_encode.x
+==28127== and then give GDB the following command
+==28127==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=28127
+==28127== --pid is optional if only one valgrind process is running
+==28127== 
+--28127-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--28127--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--28127--   .. CRC mismatch (computed fc68135e wanted 45f5e986)
+--28127--    object doesn't have a symbol table
+--28127-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22
+--28127--   Considering /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22 ..
+--28127--   .. CRC mismatch (computed a2121634 wanted 548ba1f4)
+--28127--    object doesn't have a symbol table
+--28127-- Reading syms from /lib/x86_64-linux-gnu/libm-2.19.so
+--28127--   Considering /lib/x86_64-linux-gnu/libm-2.19.so ..
+--28127--   .. CRC mismatch (computed 0fbb5cf0 wanted cac31e3b)
+--28127--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.19.so ..
+--28127--   .. CRC is valid
+--28127-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
+--28127--   Considering /lib/x86_64-linux-gnu/libgcc_s.so.1 ..
+--28127--   .. CRC mismatch (computed 5ed2fa11 wanted 7e9557f3)
+--28127--    object doesn't have a symbol table
+--28127-- Reading syms from /lib/x86_64-linux-gnu/libc-2.19.so
+--28127--   Considering /lib/x86_64-linux-gnu/libc-2.19.so ..
+--28127--   .. CRC mismatch (computed 600bae51 wanted b4d0580d)
+--28127--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.19.so ..
+--28127--   .. CRC is valid
+--28127-- Symbol match: found runtime_resolve: ld-2.19.so +0x164e0=0x40164e0
+--28127-- REDIR: 0xffffffffff600000 (???:???) redirected to 0x3805d553 (???)
+==28127== 
+--28127-- Start dumping at BB 16300327959 (Prg.Term.)...
+--28127-- Dump to /home/ale/util/callgrind.out.28127
+--28127-- Dumping done.
+==28127== Events    : Ir
+==28127== Collected : 102386803948
+==28127== 
+==28127== I   refs:      102,386,803,948

@@ -3,10 +3,11 @@ CXX_FLAGS=$(MY_CXX_FLAGS) $(MY_CXX_OPT_FLAGS) -I$(INC_DIR) -L$(LIB_DIR)
 CCLIB=-lsdsl -ldivsufsort -ldivsufsort64 
 
 OBJECTS=headers/difftree.o headers/read_MDT.o headers/directcodes.o headers/morton.o headers/basickTree.o headers/bitrankw32intkTree.o
-CFLAGS=-g -O3
+CFLAGS=-O3
 CXX=g++
 SOURCES=$(wildcard *.cpp)
 EXECS=$(SOURCES:.cpp=.x)
+DEBUG_FLAGS= -g -O0
 
 all: $(EXECS)
 
@@ -16,6 +17,9 @@ zigzag_encode.x: zigzag_encode.cpp headers/difftree.o headers/read_MDT.o
 rle.x: rle.cpp headers/read_MDT.o
 	$(CXX) $(CXX_FLAGS) $(OBJECTS) $< -o $@ $(CCLIB)
 
+
+debug_zigzag_encode.x: zigzag_encode.cpp headers/difftree.o headers/read_MDT.o
+	$(CXX) $(DEBUG_FLAGS) $(OBJECTS) $< -o $@
 
 headers/difftree.o: headers/difftree.cpp headers/directcodes.o headers/morton.o
 
