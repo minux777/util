@@ -1,0 +1,150 @@
+pow2:  8192
+no data:  -999
+min:  337
+max:  914
+new no data:  578
+size of zigzag encoder (bytes): 18996837
+
+average for points(1): p1(4478, 3202) p2(4483, 3207): 1985 us
+average for points(2): p1(4621, 358) p2(4626, 363): 40 us
+average for points(3): p1(2295, 297) p2(2300, 302): 25 us
+average for points(4): p1(5495, 150) p2(5500, 155): 18 us
+average for points(5): p1(4519, 80) p2(4524, 85): 15 us
+average for points(6): p1(1719, 484) p2(1724, 489): 32 us
+average for points(7): p1(2970, 493) p2(2975, 498): 40 us
+average for points(8): p1(4545, 2166) p2(4550, 2171): 10 us
+average for points(9): p1(4492, 2422) p2(4497, 2427): 39 us
+average for points(10): p1(866, 1949) p2(871, 1954): 121 us
+	average no opt range query (5x5): 232.5
+
+average for points(1): p1(4478, 3202) p2(4483, 3207): 13 us
+average for points(2): p1(4621, 358) p2(4626, 363): 24 us
+average for points(3): p1(2295, 297) p2(2300, 302): 186 us
+average for points(4): p1(5495, 150) p2(5500, 155): 22 us
+average for points(5): p1(4519, 80) p2(4524, 85): 21 us
+average for points(6): p1(1719, 484) p2(1724, 489): 84 us
+average for points(7): p1(2970, 493) p2(2975, 498): 174 us
+average for points(8): p1(4545, 2166) p2(4550, 2171): 24 us
+average for points(9): p1(4492, 2422) p2(4497, 2427): 13 us
+average for points(10): p1(866, 1949) p2(871, 1954): 181 us
+	average zdivide range query (5x5): 74.2
+
+average for points(1): p1(4478, 3202) p2(4483, 3207): 16 us
+average for points(2): p1(4621, 358) p2(4626, 363): 44 us
+average for points(3): p1(2295, 297) p2(2300, 302): 223 us
+average for points(4): p1(5495, 150) p2(5500, 155): 35 us
+average for points(5): p1(4519, 80) p2(4524, 85): 34 us
+average for points(6): p1(1719, 484) p2(1724, 489): 137 us
+average for points(7): p1(2970, 493) p2(2975, 498): 174 us
+average for points(8): p1(4545, 2166) p2(4550, 2171): 41 us
+average for points(9): p1(4492, 2422) p2(4497, 2427): 15 us
+average for points(10): p1(866, 1949) p2(871, 1954): 179 us
+	average quadboxes range query (5x5): 89.8
+
+average for points(1): p1(88, 992) p2(98, 1002): 428 us
+average for points(2): p1(743, 788) p2(753, 798): 77 us
+average for points(3): p1(808, 2319) p2(818, 2329): 128 us
+average for points(4): p1(2014, 2712) p2(2024, 2722): 309 us
+average for points(5): p1(2556, 1979) p2(2566, 1989): 54768 us
+average for points(6): p1(616, 1410) p2(626, 1420): 135 us
+average for points(7): p1(1331, 157) p2(1341, 167): 119 us
+average for points(8): p1(2659, 753) p2(2669, 763): 38 us
+average for points(9): p1(954, 322) p2(964, 332): 742 us
+average for points(10): p1(4656, 16) p2(4666, 26): 21 us
+	average no opt range query (10x10): 5676.5
+
+average for points(1): p1(88, 992) p2(98, 1002): 342 us
+average for points(2): p1(743, 788) p2(753, 798): 286 us
+average for points(3): p1(808, 2319) p2(818, 2329): 302 us
+average for points(4): p1(2014, 2712) p2(2024, 2722): 236 us
+average for points(5): p1(2556, 1979) p2(2566, 1989): 252 us
+average for points(6): p1(616, 1410) p2(626, 1420): 342 us
+average for points(7): p1(1331, 157) p2(1341, 167): 257 us
+average for points(8): p1(2659, 753) p2(2669, 763): 256 us
+average for points(9): p1(954, 322) p2(964, 332): 292 us
+average for points(10): p1(4656, 16) p2(4666, 26): 61 us
+	average zdivide range query (10x10): 262.6
+
+average for points(1): p1(88, 992) p2(98, 1002): 421 us
+average for points(2): p1(743, 788) p2(753, 798): 354 us
+average for points(3): p1(808, 2319) p2(818, 2329): 382 us
+average for points(4): p1(2014, 2712) p2(2024, 2722): 297 us
+average for points(5): p1(2556, 1979) p2(2566, 1989): 309 us
+average for points(6): p1(616, 1410) p2(626, 1420): 420 us
+average for points(7): p1(1331, 157) p2(1341, 167): 345 us
+average for points(8): p1(2659, 753) p2(2669, 763): 320 us
+average for points(9): p1(954, 322) p2(964, 332): 361 us
+average for points(10): p1(4656, 16) p2(4666, 26): 74 us
+	average quadboxes range query (10x10): 418.1
+
+average for points(1): p1(2308, 112) p2(2328, 132): 1477 us
+average for points(2): p1(4615, 2383) p2(4635, 2403): 149 us
+average for points(3): p1(3522, 1340) p2(3542, 1360): 656 us
+average for points(4): p1(2613, 1029) p2(2633, 1049): 1040 us
+average for points(5): p1(9, 2812) p2(29, 2832): 6771 us
+average for points(6): p1(4608, 1317) p2(4628, 1337): 84 us
+average for points(7): p1(4283, 982) p2(4303, 1002): 597 us
+average for points(8): p1(636, 2590) p2(656, 2610): 3054 us
+average for points(9): p1(129, 403) p2(149, 423): 220 us
+average for points(10): p1(1019, 3396) p2(1039, 3416): 251882 us
+	average no opt range query (20x20): 26593
+
+average for points(1): p1(2308, 112) p2(2328, 132): 451 us
+average for points(2): p1(4615, 2383) p2(4635, 2403): 124 us
+average for points(3): p1(3522, 1340) p2(3542, 1360): 668 us
+average for points(4): p1(2613, 1029) p2(2633, 1049): 655 us
+average for points(5): p1(9, 2812) p2(29, 2832): 501 us
+average for points(6): p1(4608, 1317) p2(4628, 1337): 155 us
+average for points(7): p1(4283, 982) p2(4303, 1002): 157 us
+average for points(8): p1(636, 2590) p2(656, 2610): 604 us
+average for points(9): p1(129, 403) p2(149, 423): 605 us
+average for points(10): p1(1019, 3396) p2(1039, 3416): 469 us
+	average zdivide range query (20x20): 438.9
+
+average for points(1): p1(2308, 112) p2(2328, 132): 586 us
+average for points(2): p1(4615, 2383) p2(4635, 2403): 150 us
+average for points(3): p1(3522, 1340) p2(3542, 1360): 926 us
+average for points(4): p1(2613, 1029) p2(2633, 1049): 818 us
+average for points(5): p1(9, 2812) p2(29, 2832): 709 us
+average for points(6): p1(4608, 1317) p2(4628, 1337): 179 us
+average for points(7): p1(4283, 982) p2(4303, 1002): 180 us
+average for points(8): p1(636, 2590) p2(656, 2610): 724 us
+average for points(9): p1(129, 403) p2(149, 423): 851 us
+average for points(10): p1(1019, 3396) p2(1039, 3416): 576 us
+	average quadboxes range query (20x20): 988
+
+average for points(1): p1(1450, 3901) p2(1500, 3951): 1396 us
+average for points(2): p1(5652, 3558) p2(5702, 3608): 16599 us
+average for points(3): p1(2805, 746) p2(2855, 796): 18884 us
+average for points(4): p1(2369, 1626) p2(2419, 1676): 2422 us
+average for points(5): p1(746, 3416) p2(796, 3466): 17651 us
+average for points(6): p1(4306, 762) p2(4356, 812): 12198 us
+average for points(7): p1(2632, 345) p2(2682, 395): 1859 us
+average for points(8): p1(3426, 2356) p2(3476, 2406): 3018 us
+average for points(9): p1(2382, 1916) p2(2432, 1966): 5234 us
+average for points(10): p1(3421, 3670) p2(3471, 3720): 5056 us
+	average no opt range query (50x50): 8431.7
+
+average for points(1): p1(1450, 3901) p2(1500, 3951): 1446 us
+average for points(2): p1(5652, 3558) p2(5702, 3608): 521 us
+average for points(3): p1(2805, 746) p2(2855, 796): 1819 us
+average for points(4): p1(2369, 1626) p2(2419, 1676): 1854 us
+average for points(5): p1(746, 3416) p2(796, 3466): 1552 us
+average for points(6): p1(4306, 762) p2(4356, 812): 551 us
+average for points(7): p1(2632, 345) p2(2682, 395): 1582 us
+average for points(8): p1(3426, 2356) p2(3476, 2406): 1478 us
+average for points(9): p1(2382, 1916) p2(2432, 1966): 1740 us
+average for points(10): p1(3421, 3670) p2(3471, 3720): 1575 us
+	average zdivide range query (50x50): 1411.8
+
+average for points(1): p1(1450, 3901) p2(1500, 3951): 1846 us
+average for points(2): p1(5652, 3558) p2(5702, 3608): 605 us
+average for points(3): p1(2805, 746) p2(2855, 796): 2164 us
+average for points(4): p1(2369, 1626) p2(2419, 1676): 2331 us
+average for points(5): p1(746, 3416) p2(796, 3466): 1979 us
+average for points(6): p1(4306, 762) p2(4356, 812): 634 us
+average for points(7): p1(2632, 345) p2(2682, 395): 1918 us
+average for points(8): p1(3426, 2356) p2(3476, 2406): 1856 us
+average for points(9): p1(2382, 1916) p2(2432, 1966): 2043 us
+average for points(10): p1(3421, 3670) p2(3471, 3720): 1934 us
+	average quadboxes range query (50x50): 2719

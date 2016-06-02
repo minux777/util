@@ -13,6 +13,8 @@ class read_MDT
   
  public:  
   std::vector<int> read_morton_mdt(const char name[], int flag);  
+  std::vector<std::pair <std::pair<int,int>, std::pair<int,int> > > read_querys(const char filename[]);
+  void make_random_range_querys(const char filename[], int n_querys, int height, int width);
   int get_cols();
   int get_rows();
   int get_min();
