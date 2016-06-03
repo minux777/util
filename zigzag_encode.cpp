@@ -29,10 +29,11 @@ int main(int argc, char * argv[]){
   long int temp_time;
   for(int i = 0; i < 4; i++){
     
-    reader.make_random_range_querys(("hola.txt"), different_querys, sizes[i], sizes[i]);
+    reader.make_random_range_querys( (querysfname + to_string(sizes[i]) + ".txt").c_str(), different_querys, sizes[i], sizes[i]);
     vector<pair<pair<int,int>, pair<int,int> > > querys = 
-      reader.read_querys("hola.txt");
+      reader.read_querys((querysfname + to_string(sizes[i]) + ".txt").c_str());
     
+   
     cout << endl;
     for(int j = 0; j < different_querys; j++){
       gettimeofday(&start, NULL);
@@ -103,29 +104,5 @@ int main(int argc, char * argv[]){
     average_no_opt_rq = 0;
 
   }
-  /*
-
-
-  
-    gettimeofday(&start, NULL);
-    int **matrix2 = df.rectangle_query(x1,y1,x2,y2);
-    gettimeofday(&end, NULL);
-    temp_time = (double)end.tv_usec - (double)start.tv_usec +  ((double)end.tv_sec - (double)start.tv_sec) *  1000000;   
-    average_zdrq += temp_time;
-      
-    gettimeofday(&start, NULL);
-    int **matrix3 = df.dqb_range_query(x1,y1,x2,y2);
-    gettimeofday(&end, NULL);
-    temp_time = (double)end.tv_usec - (double)start.tv_usec +  ((double)end.tv_sec - (double)start.tv_sec) *  1000000;
-    average_qbrq += temp_time;
-  */
-
-  /*free(matrix1);
-    free(matrix2);
-    free(matrix3);
-
-    cout << "average bad range query: " << (average_brq / 10) << endl;
-    cout << "average zdidive range query: " << (average_zdrq / 10) << endl;
-    cout << "average quadboxes range query: " << (average_qbrq / 10) << endl;*/
   return 0;
 }
