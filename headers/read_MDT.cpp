@@ -115,9 +115,9 @@ std::vector<std::pair< std::pair<int,int>, std::pair<int,int> > > read_MDT::read
   int unused __attribute__((unused));
 
   unused = fscanf(file, "%d", &n_querys);
-  int x1, x2, y1, y2;
+  int x1, x2, y1, y2, bottom_r, up_r;
   for(int i = 0; i < n_querys; i++){
-    unused = fscanf(file, "%d %d %d %d", &x1, &y1, &x2, &y2);
+    unused = fscanf(file, "%d %d %d %d %d %d", &x1, &y1, &x2, &y2, &bottom_r, &up_r);
     querys.push_back(std::make_pair(std::make_pair(x1, y1), std::make_pair(x2, y2)));
   }
   fclose(file);
@@ -130,11 +130,11 @@ void read_MDT::make_random_range_querys(const char filename[], int n_querys, int
   fprintf(file, "%d\n", n_querys);
   int x1, x2, y1, y2;
   for(int i = 0; i < n_querys; i++){
-    x1 = (rand() % cols_) - height;
-    y1 = (rand() % rows_) - width;
+    x1 = (rand() % (cols_ - height));
+    y1 = (rand() % (rows_ - width));
     x2 = x1 + height;
     y2 = y1 + width;
-    fprintf(file, "%d %d %d %d \n", x1, y1, x2, y2);
+    fprintf(file, "%d %d %d %d %d %d\n", x1, y1, x2, y2, min_, max_);
   }
   fclose(file);
 }

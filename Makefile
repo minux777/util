@@ -8,18 +8,26 @@ CXX=g++
 SOURCES=$(wildcard *.cpp)
 EXECS=$(SOURCES:.cpp=.x)
 DEBUG_FLAGS= -g -O0
+ALL_FLAGS=-std=c++11 $(OPT)
 
-all: $(EXECS)
+all: $(EXECS) $(OBJECTS)
+
+%.debug: %.cpp $(OBJECTS)
+	$(CXX) $(DEBUG_FLAGS) $(OBJECTS) $< -o $@
+
 
 zigzag_encode.x: zigzag_encode.cpp headers/difftree.o headers/read_MDT.o
-	$(CXX) -std=c++11 $(OPT) $(OBJECTS) $< -o $@
+	$(CXX) $(ALL_FLAGS) $(OBJECTS) $< -o $@
 
+make_random_querys.x: make_random_querys.cpp headers/read_MDT.o
+	$(CXX) $(ALL_FLAGS) $(OBJECTS) $< -o $@
+
+
+
+#use especial libraries
 rle.x: rle.cpp headers/read_MDT.o
 	$(CXX) $(CXX_FLAGS) $(OBJECTS) $< -o $@ $(CCLIB)
 
-
-debug_zigzag_encode.x: zigzag_encode.cpp headers/difftree.o headers/read_MDT.o
-	$(CXX) $(DEBUG_FLAGS) $(OBJECTS) $< -o $@
 
 headers/difftree.o: headers/difftree.cpp headers/directcodes.o headers/morton.o
 
