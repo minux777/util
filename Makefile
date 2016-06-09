@@ -1,14 +1,20 @@
 include /home/ale/sdsl-lite/Make.helper
+HEADERS=headers
+K2TREE_PATH=../k2tree
+K2TREE_OBJECTS=$(K2TREE_PATH)/basic.o $(K2TREE_PATH)/bitrankw32int.o $(K2TREE_PATH)/directcodes.o $(K2TREE_PATH)/kTree.o $(K2TREE_PATH)/hash.o $(K2TREE_PATH)/MemoryManager.o
+
+OBJECTS=$(HEADERS)/difftree.o $(HEADERS)/read_MDT.o $(HEADERS)/directcodes.o $(HEADERS)/morton.o $(HEADERS)/basickTree.o $(HEADERS)/bitrankw32intkTree.o
+
 CXX_FLAGS=$(MY_CXX_FLAGS) $(MY_CXX_OPT_FLAGS) -I$(INC_DIR) -L$(LIB_DIR) 
 CCLIB=-lsdsl -ldivsufsort -ldivsufsort64 
-
-OBJECTS=headers/difftree.o headers/read_MDT.o headers/directcodes.o headers/morton.o headers/basickTree.o headers/bitrankw32intkTree.o
 OPT=-O3 -ffast-math -funroll-loops -msse4.2 -DHAVE_CXA_DEMANGLE
+ALL_FLAGS=-std=c++11 $(OPT)
+DEBUG_FLAGS= -g -O0
+
 CXX=g++
+
 SOURCES=$(wildcard *.cpp)
 EXECS=$(SOURCES:.cpp=.x)
-DEBUG_FLAGS= -g -O0
-ALL_FLAGS=-std=c++11 $(OPT)
 
 all: $(EXECS) $(OBJECTS)
 
@@ -16,30 +22,43 @@ all: $(EXECS) $(OBJECTS)
 	$(CXX) $(DEBUG_FLAGS) $(OBJECTS) $< -o $@
 
 
-zigzag_encode.x: zigzag_encode.cpp headers/difftree.o headers/read_MDT.o
+zigzag_encode.x: zigzag_encode.cpp $(HEADERS)/difftree.o $(HEADERS)/read_MDT.o
 	$(CXX) $(ALL_FLAGS) $(OBJECTS) $< -o $@
 
-make_random_querys.x: make_random_querys.cpp headers/read_MDT.o
+make_random_querys.x: make_random_querys.cpp $(HEADERS)/read_MDT.o
 	$(CXX) $(ALL_FLAGS) $(OBJECTS) $< -o $@
+
+make_tree_file.x: make_tree_file.cpp $(HEADERS)/read_MDT.o
+	$(CXX) $(ALL_FLAGS) $(OBJECTS) $< -o $@
+
+
+test_range_counting.x: test_range_counting.cpp
+	$(CXX) $(ALL_FLAGS) $(K2TREE_OBJECTS) $< -o $@
+
 
 
 
 #use especial libraries
-rle.x: rle.cpp headers/read_MDT.o
+rle.x: rle.cpp $(HEADERS)/read_MDT.o
 	$(CXX) $(CXX_FLAGS) $(OBJECTS) $< -o $@ $(CCLIB)
 
 
-headers/difftree.o: headers/difftree.cpp headers/directcodes.o headers/morton.o
 
-headers/read_MDT.o: headers/read_MDT.cpp headers/morton.o
+%.o: %.c
+	$(CXX) $(ALL_FLAGS) -c $< -o $@
 
-headers/directcodes.o: headers/directcodes.cpp headers/basickTree.o headers/bitrankw32intkTree.o
+#$(HEADERS)/difftree.o: $(HEADERS)/difftree.cpp $(HEADERS)/directcodes.o $(HEADERS)/morton.o
 
-headers/morton.o: headers/morton.cpp
+#$(HEADERS)/read_MDT.o: $(HEADERS)/read_MDT.cpp $(HEADERS)/morton.o
 
-headers/basickTree.o: headers/basickTree.cpp
+#$(HEADERS)/directcodes.o: $(HEADERS)/directcodes.cpp $(HEADERS)/basickTree.o $(HEADERS)/bitrankw32intkTree.o
 
-headers/bitrankw32intkTree.o: headers/bitrankw32intkTree.cpp headers/basickTree.o
+#$(HEADERS)/morton.o: $(HEADERS)/morton.cpp
 
-#headers/morton.cpp headers/read_MDT.cpp headers/bitrankw32intkTree.cpp headers/directcodes.cpp headers/basickTree.cpp headers/difftree.cpp -o zigzag.x2
+#$(HEADERS)/basickTree.o: $(HEADERS)/basickTree.cpp
 
+#$(HEADERS)/bitrankw32intkTree.o: $(HEADERS)/bitrankw32intkTree.cpp $(HEADERS)/basickTree.o
+
+clean:
+	rm *.x *~
+#$(HEADERS)/morton.cpp $(HEADERS)/read_MDT.cpp $(HEADERS)/bitrankw32intkTree.cpp $(HEADERS)/directcodes.cpp $(HEADERS)/basickTree.cpp $(HEADERS)/difftree.cpp -o zigzag.x2

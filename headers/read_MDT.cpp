@@ -58,14 +58,7 @@ std::vector<int> read_MDT::read_morton_mdt(const char  name[], int flag = 1){
       V.push_back( (it->second == no_data) ? (_max - _min) + 1 : it -> second - _min );
     to_ret =  V;
   }
-    
-  
-  printf("%s %d\n", ((flag == 1)? "pow2: ": "pow2 not used: "), pow2);
 
-  printf("%s %d\n", "no data: ",no_data);
-  printf("%s %d\n", "min: ", _min);
-  printf("%s %d\n", "max: ", _max);
-  printf("%s %d\n", "new no data: ", (_max - _min) + 1);
   cols_ = c;
   rows_ = r;
   min_ = _min;
@@ -73,34 +66,9 @@ std::vector<int> read_MDT::read_morton_mdt(const char  name[], int flag = 1){
   pow2_ = pow2;
   original_no_data_ = no_data;
   new_no_data_ = (_max - _min) + 1;
+  flag_= flag;
+
   return to_ret;
-}
-
-int read_MDT::get_cols(){
-  return cols_;
-}
-
-int read_MDT::get_rows(){
-  return rows_;
-}
-
-int read_MDT::get_min(){
-  return min_;
-}
-
-int read_MDT::get_max(){
-  return max_;
-}
-
-int read_MDT::get_pow2(){
-  return pow2_;
-}
-
-int read_MDT::get_no_data(){
-  return original_no_data_;
-}
-int read_MDT::get_new_no_data(){
-  return new_no_data_;
 }
 
 std::vector<std::pair< std::pair<int,int>, std::pair<int,int> > > read_MDT::read_querys(const char filename[]){
@@ -137,4 +105,80 @@ void read_MDT::make_random_range_querys(const char filename[], int n_querys, int
     fprintf(file, "%d %d %d %d %d %d\n", x1, y1, x2, y2, min_, max_);
   }
   fclose(file);
+}
+
+
+
+void read_MDT::make_tree_graph(const char name[], const char outname[] = "salida.k2t" ){
+  std::vector<int> V = read_morton_mdt(name, 1);
+  std::vector<std::vector<int> > graph((max_ - min_) + 2);
+  for(unsigned int i = 0; i < V.size(); i++)
+    graph[V[i]].push_back(i);
+  int nodes = std::max((int)(((int)max_ - min_) + 2), (int)(pow2_*pow2_));
+  long int edges = pow2_ * pow2_;
+  write_graph(nodes, edges, graph, outname);
+}
+
+void read_MDT::write_graph(int nodes, long int edges, std::vector<std::vector<int > > G, const char* filename){
+  FILE *fp;
+  fp = fopen( filename , "w" );
+  fwrite(&nodes , sizeof(int), 1 , fp );
+  fwrite(&edges , sizeof(long int), 1 , fp );
+  int temp;
+  unsigned int i;
+  for(i = 0; i < G.size() - 1; i++){
+    temp = (i + 1)*(-1);
+    fwrite(  &temp, sizeof(int), 1 , fp );
+    for(unsigned int j = 0; j < G[i].size(); j++){
+      temp = G[i][j] + 1;
+      fwrite( &temp , sizeof(int), 1 , fp );
+    }
+  }
+  for(;i < (unsigned)nodes; i++){
+    temp = (i + 1)*(-1);
+    fwrite(  &temp, sizeof(int), 1 , fp );
+  }
+  fclose(fp);
+}
+
+
+void read_MDT::print_info(){
+  printf("%s %d\n", "cols: ", cols_);
+  printf("%s %d\n", "rows: ", rows_);
+  printf("%s %d\n", ((flag_ == 1)? "pow2: ": "pow2 not used: "), pow2_);
+  printf("%s %d\n", "no data: ",original_no_data_);
+  printf("%s %d\n", "min: ", min_);
+  printf("%s %d\n", "max: ", max_);
+  printf("%s %d\n", "new no data: ", new_no_data_);
+}
+
+
+
+
+
+int read_MDT::get_cols(){
+  return cols_;
+}
+
+int read_MDT::get_rows(){
+  return rows_;
+}
+
+int read_MDT::get_min(){
+  return min_;
+}
+
+int read_MDT::get_max(){
+  return max_;
+}
+
+int read_MDT::get_pow2(){
+  return pow2_;
+}
+
+int read_MDT::get_no_data(){
+  return original_no_data_;
+}
+int read_MDT::get_new_no_data(){
+  return new_no_data_;
 }
