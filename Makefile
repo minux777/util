@@ -32,9 +32,11 @@ make_tree_file.x: make_tree_file.cpp $(HEADERS)/read_MDT.o
 	$(CXX) $(ALL_FLAGS) $(OBJECTS) $< -o $@
 
 
-test_range_counting.x: test_range_counting.cpp
-	$(CXX) $(ALL_FLAGS) $(K2TREE_OBJECTS) $< -o $@
+test_range_counting.x: test_range_counting.cpp $(HEADERS)/read_MDT.o $(HEADERS)/morton.o
+	$(CXX) $(ALL_FLAGS) $(K2TREE_OBJECTS) $(HEADERS)/read_MDT.o $(HEADERS)/morton.o $< -o $@
 
+test_range_counting.d: test_range_counting.cpp $(HEADERS)/read_MDT.o $(HEADERS)/morton.o
+	$(CXX) -g -O0 $(K2TREE_OBJECTS) $(HEADERS)/read_MDT.o $(HEADERS)/morton.o $< -o $@
 
 
 

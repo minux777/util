@@ -13,6 +13,7 @@ if(argc < 3){
  }
  read_MDT reader;
  vector <int> V = reader.read_morton_mdt(argv[1], atoi(argv[2]));
+ reader.print_info();
 
  DiffTree df(V, 0);//binary heap embbeding
  cout << "size of zigzag encoder (bytes): " << df.getSize() << endl;
@@ -33,8 +34,7 @@ if(argc < 3){
        df.rangeQuery(querys[j].first.first, querys[j].first.second, querys[j].second.first, querys[j].second.second);     
      }
    }
-   printf("no optimization rq: time = %f(s), time per query = %.2lf(us)\n", timeFromBegin(), (timeFromBegin()*1000000.0/querys.size()/repeat_for_average));   
-   
+   printf("no optimization rq: time = %f(s), time per query = %.2lf(us)\n", timeFromBegin(), (timeFromBegin()*1000000.0/querys.size()/repeat_for_average));      
 
    startTimer();
    for(int i = 0; i < repeat_for_average; i++){
@@ -44,11 +44,11 @@ if(argc < 3){
    }
    printf("zdivide rq: time = %f(s), time per query = %.2lf(us)\n", timeFromBegin(), (timeFromBegin()*1000000.0/querys.size()/repeat_for_average));   
    
-
+   int **matrix;
    startTimer();
    for(int i = 0; i < repeat_for_average; i++){
      for(int j = 0; j < querys.size(); j++){
-       df.dqb_range_query(querys[j].first.first, querys[j].first.second, querys[j].second.first, querys[j].second.second);     
+       matrix = df.dqb_range_query(querys[j].first.first, querys[j].first.second, querys[j].second.first, querys[j].second.second);     
      }
    }
    printf("quadboxes rq: time = %f(s), time per query = %.2lf(us)\n", timeFromBegin(), (timeFromBegin()*1000000.0/querys.size()/repeat_for_average));   
