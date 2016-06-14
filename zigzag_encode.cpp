@@ -44,15 +44,13 @@ if(argc < 3){
    }
    printf("zdivide rq: time = %f(s), time per query = %.2lf(us)\n", timeFromBegin(), (timeFromBegin()*1000000.0/querys.size()/repeat_for_average));   
    
-   int **matrix;
    startTimer();
    for(int i = 0; i < repeat_for_average; i++){
      for(int j = 0; j < querys.size(); j++){
-       matrix = df.dqb_range_query(querys[j].first.first, querys[j].first.second, querys[j].second.first, querys[j].second.second);     
+       df.dqb_range_query(querys[j].first.first, querys[j].first.second, querys[j].second.first, querys[j].second.second);     
      }
    }
    printf("quadboxes rq: time = %f(s), time per query = %.2lf(us)\n", timeFromBegin(), (timeFromBegin()*1000000.0/querys.size()/repeat_for_average));   
-
  }
  return 0;
 }

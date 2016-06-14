@@ -31,11 +31,19 @@ class read_MDT
    * the next n lines have six integers
    * the first two are the x and y coordinates of the up-left corner
    * the second two are the x and y coordinates of the bottom-right corner
-   * and the last two are the min and max value for the window (for future windows query)
+   * and the last two are the min and max value for the range for windows query with range limits
    *
-   * flag: read with(1) or without(0) aditional zeros.
+   * W_vecvtor: is the vector for the min an max value of the range
    */
-  std::vector<std::pair <std::pair<int,int>, std::pair<int,int> > > read_querys(const char filename[]);
+  std::vector<std::pair <std::pair<int,int>, std::pair<int,int> > > read_querys(const char filename[],  std::vector<std::pair<int,int> > &W_vector);
+
+  /**
+   * inline method read_querys, that don't uses the W_vector 
+   */
+  inline std::vector<std::pair <std::pair<int,int>, std::pair<int,int> > > read_querys(const char filename[]){
+    std::vector<std::pair<int, int> > v;
+    return read_querys(filename, v);
+  }
 
   /**
    * makes a file of random querys that could be readed by the read_querys method
@@ -45,7 +53,11 @@ class read_MDT
    * height: the height of the range query
    * width: the width of the range query
    */
-  void make_random_range_querys(const char filename[], int n_querys, int height, int width);
+  void make_random_range_querys(const char filename[], int n_querys, int height, int width, int range_min, int range_max);
+  
+  inline void make_random_range_querys(const char filename[], int n_querys, int height, int width){
+    make_random_range_querys(filename, n_querys, height, width, min_, max_);
+  }
 
   /**
    * makes a graph file that could be the input file of a k2tree buider

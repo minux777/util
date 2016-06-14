@@ -71,7 +71,7 @@ std::vector<int> read_MDT::read_morton_mdt(const char  name[], int flag = 1){
   return to_ret;
 }
 
-std::vector<std::pair< std::pair<int,int>, std::pair<int,int> > > read_MDT::read_querys(const char filename[]){
+std::vector<std::pair< std::pair<int,int>, std::pair<int,int> > > read_MDT::read_querys(const char filename[], std::vector<std::pair<int,int> > &W_vector){
   int n_querys;
   std::vector<std::pair< std::pair<int,int>, std::pair<int,int> > > querys;
   FILE *file;
@@ -87,13 +87,14 @@ std::vector<std::pair< std::pair<int,int>, std::pair<int,int> > > read_MDT::read
   for(int i = 0; i < n_querys; i++){
     unused = fscanf(file, "%d %d %d %d %d %d", &x1, &y1, &x2, &y2, &bottom_r, &up_r);
     querys.push_back(std::make_pair(std::make_pair(x1, y1), std::make_pair(x2, y2)));
+    W_vector.push_back(std::make_pair(bottom_r, up_r));
   }
   fclose(file);
   return querys;
 }
 
 
-void read_MDT::make_random_range_querys(const char filename[], int n_querys, int height, int width){
+void read_MDT::make_random_range_querys(const char filename[], int n_querys, int height, int width, int range_min, int range_max){
   FILE *file = fopen(filename, "w");
   fprintf(file, "%d\n", n_querys);
   int x1, x2, y1, y2;
@@ -102,7 +103,7 @@ void read_MDT::make_random_range_querys(const char filename[], int n_querys, int
     y1 = (rand() % (rows_ - width));
     x2 = x1 + height;
     y2 = y1 + width;
-    fprintf(file, "%d %d %d %d %d %d\n", x1, y1, x2, y2, min_, max_);
+    fprintf(file, "%d %d %d %d %d %d\n", x1, y1, x2, y2, range_min, range_max);
   }
   fclose(file);
 }
