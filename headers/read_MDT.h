@@ -54,10 +54,17 @@ class read_MDT
    * width: the width of the range query
    */
   void make_random_range_querys(const char filename[], int n_querys, int height, int width, int range_min, int range_max);
+
+  
+
   
   inline void make_random_range_querys(const char filename[], int n_querys, int height, int width){
     make_random_range_querys(filename, n_querys, height, width, min_, max_);
   }
+
+  void make_random_range_querys(const char filename[], int n_querys, int height, int width, int range_len);
+
+
 
   /**
    * makes a graph file that could be the input file of a k2tree buider
@@ -66,6 +73,21 @@ class read_MDT
    * outname: the file outname
    */
   void make_tree_graph(const char name[], const char outname[]);
+
+
+
+
+  /**
+   * write a matrix to a file
+   * matrix: the matrix to write
+   * cols: the number of cols of the matrix
+   * rows: the number of rows of the matrix
+   * filename: the file out name.
+   */
+  void write_matrix(int **matrix, int cols, int rows, const char filename[]);
+  
+
+
 
   /**
    * prints the cols, rows, min, max, pow2, no_data and new_no_data values

@@ -1,0 +1,50 @@
+500-q-quadbox-128x128-1000 k2tree zorder rq: time = 8.730000(s),results: 89972800, time per query = 312.90(us)
+
+500-q-quadbox-128x128-100 k2tree zorder rq: time = 0.880000(s),results: 7806980, time per query = 31.54(us)
+
+500-q-quadbox-128x128-2000 k2tree zorder rq: time = 21.460000(s),results: 218406560, time per query = 769.18(us)
+
+500-q-quadbox-128x128-4000 k2tree zorder rq: time = 41.180000(s),results: 423545260, time per query = 1475.99(us)
+
+500-q-quadbox-128x128-500 k2tree zorder rq: time = 4.010000(s),results: 41249300, time per query = 143.73(us)
+
+500-q-quadbox-16x16-1000 k2tree zorder rq: time = 10.460000(s),results: 96037860, time per query = 5.73(us)
+
+500-q-quadbox-16x16-100 k2tree zorder rq: time = 1.650000(s),results: 8282280, time per query = 0.90(us)
+
+500-q-quadbox-16x16-2000 k2tree zorder rq: time = 23.150000(s),results: 220573280, time per query = 12.68(us)
+
+500-q-quadbox-16x16-4000 k2tree zorder rq: time = 44.320000(s),results: 434482980, time per query = 24.28(us)
+
+500-q-quadbox-16x16-500 k2tree zorder rq: time = 5.270000(s),results: 43652360, time per query = 2.89(us)
+
+500-q-quadbox-256x256-1000 k2tree zorder rq: time = 7.320000(s),results: 75049540, time per query = 1109.09(us)
+
+500-q-quadbox-256x256-100 k2tree zorder rq: time = 0.760000(s),results: 7181840, time per query = 115.15(us)
+
+500-q-quadbox-256x256-2000 k2tree zorder rq: time = 20.740000(s),results: 211026900, time per query = 3142.42(us)
+
+500-q-quadbox-256x256-4000 k2tree zorder rq: time = 39.550000(s),results: 404925240, time per query = 5992.42(us)
+
+500-q-quadbox-256x256-500 k2tree zorder rq: time = 3.650000(s),results: 37787740, time per query = 553.03(us)
+
+500-q-quadbox-512x512-1000 k2tree zorder rq: time = 4.480000(s),results: 44806760, time per query = 2909.09(us)
+
+500-q-quadbox-512x512-100 k2tree zorder rq: time = 1.160000(s),results: 13037060, time per query = 753.25(us)
+
+500-q-quadbox-512x512-2000 k2tree zorder rq: time = 21.380000(s),results: 221253600, time per query = 13883.12(us)
+
+500-q-quadbox-512x512-4000 k2tree zorder rq: time = 36.850000(s),results: 381712460, time per query = 23928.57(us)
+
+500-q-quadbox-512x512-500 k2tree zorder rq: time = 3.930000(s),results: 42397560, time per query = 2551.95(us)
+
+500-q-quadbox-64x64-1000 k2tree zorder rq: time = 9.300000(s),results: 94306680, time per query = 82.42(us)
+
+500-q-quadbox-64x64-100 k2tree zorder rq: time = 0.880000(s),results: 7873700, time per query = 7.80(us)
+
+500-q-quadbox-64x64-2000 k2tree zorder rq: time = 21.370000(s),results: 218713280, time per query = 189.38(us)
+
+500-q-quadbox-64x64-4000 k2tree zorder rq: time = 41.860000(s),results: 431078800, time per query = 370.97(us)
+
+500-q-quadbox-64x64-500 k2tree zorder rq: time = 4.160000(s),results: 42760700, time per query = 36.87(us)
+

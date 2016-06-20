@@ -109,6 +109,26 @@ void read_MDT::make_random_range_querys(const char filename[], int n_querys, int
 }
 
 
+void read_MDT::make_random_range_querys(const char filename[], int n_querys, int height, int width, int range_len){
+  FILE *file = fopen(filename, "w");
+  fprintf(file, "%d\n", n_querys);
+  int x1, x2, y1, y2;
+  for(int i = 0; i < n_querys; i++){
+    int range  = rand() % (get_max()- get_min() - range_len);
+    range += get_min();
+    x1 = (rand() % (cols_ - height));
+    y1 = (rand() % (rows_ - width));
+    x2 = x1 + height;
+    y2 = y1 + width;
+    fprintf(file, "%d %d %d %d %d %d\n", x1, y1, x2, y2, range, range + range_len);
+  }
+  fclose(file);
+}
+
+
+
+
+
 
 void read_MDT::make_tree_graph(const char name[], const char outname[] = "salida.k2t" ){
   std::vector<int> V = read_morton_mdt(name, 1);
@@ -182,4 +202,14 @@ int read_MDT::get_no_data(){
 }
 int read_MDT::get_new_no_data(){
   return new_no_data_;
+}
+void read_MDT::write_matrix(int **matrix, int cols, int rows, const char filename[]){
+  FILE *file = fopen(filename, "w");
+  fprintf(file, "%d %d\n", cols, rows);
+  for(int i = 0; i < rows; i++){
+    for(int j = 0; j < cols; j++)
+      fprintf(file, "%d%s",matrix[i][j], (j==cols - 1)?"":" ");
+      fprintf(file, "\n");
+  }
+  fclose(file);
 }

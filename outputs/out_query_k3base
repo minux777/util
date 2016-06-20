@@ -1,0 +1,50 @@
+random-mdt500-100x100-100 time = 2.580000, results = 29970800, us/query = 129.000000, us/res=0.086084
+
+random-mdt500-100x100-10 time = 0.270000, results = 2263600, us/query = 13.500000, us/res=0.119279
+
+random-mdt500-100x100-200 time = 5.830000, results = 69998540, us/query = 291.500000, us/res=0.083287
+
+random-mdt500-100x100-400 time = 11.290000, results = 137166760, us/query = 564.500000, us/res=0.082309
+
+random-mdt500-100x100-50 time = 1.070000, results = 11986920, us/query = 53.500000, us/res=0.089264
+
+random-mdt500-10x10-100 time = 0.050000, results = 313920, us/query = 2.500000, us/res=0.159276
+
+random-mdt500-10x10-10 time = 0.020000, results = 40140, us/query = 1.000000, us/res=0.498256
+
+random-mdt500-10x10-200 time = 0.120000, results = 784000, us/query = 6.000000, us/res=0.153061
+
+random-mdt500-10x10-400 time = 0.220000, results = 1584960, us/query = 11.000000, us/res=0.138805
+
+random-mdt500-10x10-50 time = 0.040000, results = 180440, us/query = 2.000000, us/res=0.221680
+
+random-mdt500-200x200-100 time = 10.450000, results = 125834500, us/query = 522.500000, us/res=0.083046
+
+random-mdt500-200x200-10 time = 1.150000, results = 11091560, us/query = 57.500000, us/res=0.103682
+
+random-mdt500-200x200-200 time = 24.650000, results = 301802760, us/query = 1232.500000, us/res=0.081676
+
+random-mdt500-200x200-400 time = 45.890000, results = 568496340, us/query = 2294.500000, us/res=0.080722
+
+random-mdt500-200x200-50 time = 4.830000, results = 54410460, us/query = 241.500000, us/res=0.088770
+
+random-mdt500-400x400-100 time = 41.210000, results = 489718180, us/query = 2060.500000, us/res=0.084150
+
+random-mdt500-400x400-10 time = 5.240000, results = 54390620, us/query = 262.000000, us/res=0.096340
+
+random-mdt500-400x400-200 time = 96.850000, results = 1180051500, us/query = 4842.500000, us/res=0.082073
+
+random-mdt500-400x400-400 time = 178.130000, results = 2179915860, us/query = 8906.500000, us/res=0.081714
+
+random-mdt500-400x400-50 time = 16.090000, results = 182645320, us/query = 804.500000, us/res=0.088094
+
+random-mdt500-50x50-100 time = 0.670000, results = 7257620, us/query = 33.500000, us/res=0.092317
+
+random-mdt500-50x50-10 time = 0.070000, results = 463400, us/query = 3.500000, us/res=0.151057
+
+random-mdt500-50x50-200 time = 1.490000, results = 16672040, us/query = 74.500000, us/res=0.089371
+
+random-mdt500-50x50-400 time = 2.890000, results = 32811880, us/query = 144.500000, us/res=0.088078
+
+random-mdt500-50x50-50 time = 0.340000, results = 3229040, us/query = 17.000000, us/res=0.105294
+

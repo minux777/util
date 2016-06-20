@@ -31,9 +31,19 @@ make_random_querys.x: make_random_querys.cpp $(HEADERS)/read_MDT.o
 make_tree_file.x: make_tree_file.cpp $(HEADERS)/read_MDT.o
 	$(CXX) $(ALL_FLAGS) $(OBJECTS) $< -o $@
 
+save_matrix_query.x: save_matrix_query.cpp $(HEADERS)/difftree.o $(HEADERS)/read_MDT.o
+	$(CXX) $(ALL_FLAGS) $(OBJECTS) $< -o $@
+
+create_quadboxes_querys.x: create_quadboxes_querys.cpp
+	$(CXX) $(ALL_FLAGS) $< -o $@
+
 
 test_range_counting.x: test_range_counting.cpp $(HEADERS)/read_MDT.o $(HEADERS)/morton.o
 	$(CXX) $(ALL_FLAGS) $(K2TREE_OBJECTS) $(HEADERS)/read_MDT.o $(HEADERS)/morton.o $< -o $@
+
+test_range_counting_quadbox.x:test_range_counting_quadbox.cpp $(HEADERS)/read_MDT.o $(HEADERS)/morton.o
+	$(CXX) $(ALL_FLAGS) $(K2TREE_OBJECTS) $(HEADERS)/read_MDT.o $(HEADERS)/morton.o $< -o $@
+
 
 test_range_counting.d: test_range_counting.cpp $(HEADERS)/read_MDT.o $(HEADERS)/morton.o
 	$(CXX) -g -O0 $(K2TREE_OBJECTS) $(HEADERS)/read_MDT.o $(HEADERS)/morton.o $< -o $@
@@ -43,9 +53,6 @@ test_range_counting.d: test_range_counting.cpp $(HEADERS)/read_MDT.o $(HEADERS)/
 #use especial libraries
 rle.x: rle.cpp $(HEADERS)/read_MDT.o
 	$(CXX) $(CXX_FLAGS) $(OBJECTS) $< -o $@ $(CCLIB)
-
-
-
 %.o: %.c
 	$(CXX) $(ALL_FLAGS) -c $< -o $@
 

@@ -1,0 +1,50 @@
+random-mdt500-100x100-100 k2tree zorder rq: time = 5.240000(s),results: 29970800, time per query = 262.00(us)
+
+random-mdt500-100x100-10 k2tree zorder rq: time = 3.450000(s),results: 2263600, time per query = 172.50(us)
+
+random-mdt500-100x100-200 k2tree zorder rq: time = 7.710000(s),results: 69998540, time per query = 385.50(us)
+
+random-mdt500-100x100-400 k2tree zorder rq: time = 11.550000(s),results: 137166760, time per query = 577.50(us)
+
+random-mdt500-100x100-50 k2tree zorder rq: time = 4.210000(s),results: 11986920, time per query = 210.50(us)
+
+random-mdt500-10x10-100 k2tree zorder rq: time = 0.360000(s),results: 313920, time per query = 18.00(us)
+
+random-mdt500-10x10-10 k2tree zorder rq: time = 0.310000(s),results: 40140, time per query = 15.50(us)
+
+random-mdt500-10x10-200 k2tree zorder rq: time = 0.450000(s),results: 784000, time per query = 22.50(us)
+
+random-mdt500-10x10-400 k2tree zorder rq: time = 0.570000(s),results: 1584960, time per query = 28.50(us)
+
+random-mdt500-10x10-50 k2tree zorder rq: time = 0.330000(s),results: 180440, time per query = 16.50(us)
+
+random-mdt500-200x200-100 k2tree zorder rq: time = 14.120000(s),results: 125834500, time per query = 706.00(us)
+
+random-mdt500-200x200-10 k2tree zorder rq: time = 7.760000(s),results: 11091560, time per query = 388.00(us)
+
+random-mdt500-200x200-200 k2tree zorder rq: time = 23.610000(s),results: 301802760, time per query = 1180.50(us)
+
+random-mdt500-200x200-400 k2tree zorder rq: time = 37.190000(s),results: 568496340, time per query = 1859.50(us)
+
+random-mdt500-200x200-50 k2tree zorder rq: time = 10.270000(s),results: 54410460, time per query = 513.50(us)
+
+random-mdt500-400x400-100 k2tree zorder rq: time = 40.180000(s),results: 489718180, time per query = 2009.00(us)
+
+random-mdt500-400x400-10 k2tree zorder rq: time = 18.050000(s),results: 54390620, time per query = 902.50(us)
+
+random-mdt500-400x400-200 k2tree zorder rq: time = 74.750000(s),results: 1180051500, time per query = 3737.50(us)
+
+random-mdt500-400x400-400 k2tree zorder rq: time = 122.660000(s),results: 2179915860, time per query = 6133.00(us)
+
+random-mdt500-400x400-50 k2tree zorder rq: time = 24.330000(s),results: 182645320, time per query = 1216.50(us)
+
+random-mdt500-50x50-100 k2tree zorder rq: time = 2.180000(s),results: 7257620, time per query = 109.00(us)
+
+random-mdt500-50x50-10 k2tree zorder rq: time = 1.570000(s),results: 463400, time per query = 78.50(us)
+
+random-mdt500-50x50-200 k2tree zorder rq: time = 2.900000(s),results: 16672040, time per query = 145.00(us)
+
+random-mdt500-50x50-400 k2tree zorder rq: time = 4.040000(s),results: 32811880, time per query = 202.00(us)
+
+random-mdt500-50x50-50 k2tree zorder rq: time = 1.840000(s),results: 3229040, time per query = 92.00(us)
+

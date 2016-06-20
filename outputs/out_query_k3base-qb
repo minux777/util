@@ -1,0 +1,50 @@
+random-quadbox-128x128-100 time = 7.060000, results = 91823340, us/query = 253.046595, us/res=0.076887
+
+random-quadbox-128x128-10 time = 0.820000, results = 8632100, us/query = 29.390681, us/res=0.094994
+
+random-quadbox-128x128-200 time = 16.450000, results = 216027540, us/query = 589.605735, us/res=0.076148
+
+random-quadbox-128x128-400 time = 31.820000, results = 425119520, us/query = 1140.501792, us/res=0.074850
+
+random-quadbox-128x128-50 time = 3.420000, results = 43894500, us/query = 122.580645, us/res=0.077914
+
+random-quadbox-16x16-100 time = 9.550000, results = 95831320, us/query = 5.232877, us/res=0.099654
+
+random-quadbox-16x16-10 time = 2.410000, results = 8031520, us/query = 1.320548, us/res=0.300068
+
+random-quadbox-16x16-200 time = 19.330000, results = 218382240, us/query = 10.591781, us/res=0.088515
+
+random-quadbox-16x16-400 time = 35.800000, results = 433350440, us/query = 19.616438, us/res=0.082612
+
+random-quadbox-16x16-50 time = 5.330000, results = 43428200, us/query = 2.920548, us/res=0.122731
+
+random-quadbox-256x256-100 time = 7.700000, results = 100733160, us/query = 1166.666667, us/res=0.076440
+
+random-quadbox-256x256-10 time = 0.610000, results = 6605720, us/query = 92.424242, us/res=0.092344
+
+random-quadbox-256x256-200 time = 15.960000, results = 208506700, us/query = 2418.181818, us/res=0.076544
+
+random-quadbox-256x256-400 time = 30.510000, results = 405951720, us/query = 4622.727273, us/res=0.075157
+
+random-quadbox-256x256-50 time = 3.240000, results = 41537280, us/query = 490.909091, us/res=0.078002
+
+random-quadbox-512x512-100 time = 6.590000, results = 90186500, us/query = 4279.220779, us/res=0.073071
+
+random-quadbox-512x512-10 time = 0.510000, results = 5678280, us/query = 331.168831, us/res=0.089816
+
+random-quadbox-512x512-200 time = 14.260000, results = 185346260, us/query = 9259.740260, us/res=0.076937
+
+random-quadbox-512x512-400 time = 28.100000, results = 375046760, us/query = 18246.753247, us/res=0.074924
+
+random-quadbox-512x512-50 time = 3.790000, results = 46923000, us/query = 2461.038961, us/res=0.080771
+
+random-quadbox-64x64-100 time = 7.290000, results = 93961320, us/query = 64.604750, us/res=0.077585
+
+random-quadbox-64x64-10 time = 0.850000, results = 8443280, us/query = 7.532790, us/res=0.100672
+
+random-quadbox-64x64-200 time = 16.590000, results = 218245980, us/query = 147.022333, us/res=0.076015
+
+random-quadbox-64x64-400 time = 32.250000, results = 428764540, us/query = 285.802907, us/res=0.075216
+
+random-quadbox-64x64-50 time = 3.170000, results = 39331880, us/query = 28.092875, us/res=0.080596
+
